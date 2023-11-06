@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="e"
+                 name="edu-framework"
+                 start-page="starter.md">
+
+    <toc-element topic="starter.md"/>
+
+    <toc-element toc-title="Avant le démarrage">
+        <toc-element topic="after-starter.md"/>
+        <toc-element topic="COMMAND-LINE_INSTALLER.md"/>
+        <toc-element topic="GIT.md"/>
+        <toc-element topic="COMPOSER.md"/>
+    </toc-element>
+
+</instance-profile>
