@@ -13,6 +13,7 @@
         <toc-element topic="COMMAND-LINE_INSTALLER.md"/>
         <toc-element topic="GIT.md"/>
         <toc-element topic="COMPOSER.md"/>
+        <toc-element topic="PHP.md"/>
     </toc-element>
 
 </instance-profile>
