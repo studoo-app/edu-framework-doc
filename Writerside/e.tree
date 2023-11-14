@@ -18,4 +18,6 @@
 
     <toc-element topic="how-to-install.md"/>
 
+    <toc-element topic="versionning.md"/>
+
 </instance-profile>
