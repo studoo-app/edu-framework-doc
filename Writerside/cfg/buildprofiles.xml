@@ -3,6 +3,7 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <variables>
         <primary-color>forest</primary-color>
+        <header-logo>studoo.png</header-logo>
     </variables>
     <build-profile instance="e"/>
     <footer>
