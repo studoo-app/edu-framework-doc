@@ -16,6 +16,6 @@ Tableau des versions obligatoires :
 | Composants | Version |
 |------------|---------|
 | GIT        | >= ^2.0 |
-| PHP        | >= ^8.0 |
+| PHP        | >= ^8.1 |
 | COMPOSER   | >= ^2.0 |
 
