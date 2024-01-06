@@ -8,3 +8,6 @@ Docker est une plateforme de virtualisation légère qui permet d'isoler et de g
 {style="tip"}
 
 L'utilisation de DOCKER est optionnel. Néanmoins, Docker est un outil essentiel pour les développeurs modernes.
+
+La framework est livré avec un fichier `compose.yml` qui vous permet de démarrer rapidement les services nécessaires à votre projet. 
+Pour plus d'informations, on en reparle dans la section "Démarrer les services".
