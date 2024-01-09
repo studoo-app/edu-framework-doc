@@ -98,7 +98,7 @@ Exemple d'affichage suite à la commande :
 > {style="warning"}
 
 ````Bash 
-php -r "file_exists('.env') || copy('.env.example', '.env');"
+composer edu:init
 ````
 
 # Erreur de démarrage
