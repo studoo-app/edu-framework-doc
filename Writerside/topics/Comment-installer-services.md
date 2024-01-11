@@ -4,12 +4,20 @@ Edu Framework utilise plusieurs services pour fonctionner. Pour les installer, v
 - Installer les services directement sur votre machine
 
 ## Utiliser Docker pour émuler les services
-
 Pour utiliser Docker pour émuler les services, vous pouvez suivre les instructions suivantes :
+
+> Démarrer Docker Desktop sur votre machine
+{style="note"}
 
 ````Shell
 composer edu:init
 ````
+
+Puis taper la commande suivante pour démarrer les services :
+
+```Shell
+composer edu:docker:db-service:start
+```
 
 
 ## Installer les services sur votre machine
