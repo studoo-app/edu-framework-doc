@@ -4,23 +4,23 @@
 
 <instance-profile id="e"
                  name="edu-framework"
-                 start-page="Demarrage.md">
+                 start-page="fr-edu-framework.md">
 
-    <toc-element topic="Demarrage.md"/>
+    <toc-element topic="fr-edu-framework.md"/>
 
-    <toc-element toc-title="Avant le démarrage">
-        <toc-element topic="Avant-demarrage.md"/>
-        <toc-element topic="COMMAND-LINE_INSTALLER.md"/>
-        <toc-element topic="GIT.md"/>
-        <toc-element topic="PHP.md"/>
-        <toc-element topic="COMPOSER.md"/>
-        <toc-element topic="DOCKER.md"/>
+    <toc-element toc-title="Avant de démarrer">
+        <toc-element topic="fr-avant-demarrer.md"/>
+        <toc-element topic="fr-command-line.md"/>
+        <toc-element topic="fr-git.md"/>
+        <toc-element topic="fr-php.md"/>
+        <toc-element topic="fr-composer.md"/>
+        <toc-element topic="fr-docker.md"/>
     </toc-element>
 
-    <toc-element topic="Comment-installer-edu.md"/>
+    <toc-element topic="fr-comment-installer-edu.md"/>
 
-    <toc-element topic="Comment-versionner.md"/>
+    <toc-element topic="fr-comment-versionner.md"/>
 
-    <toc-element topic="Comment-installer-services.md"/>
+    <toc-element topic="fr-comment-installer-services.md"/>
 
 </instance-profile>
