@@ -1,4 +1,4 @@
-# Comment installer ?
+# Comment installer Edu-F ?
 Comment installer le framework Edu-Framework
 
 ## Installation

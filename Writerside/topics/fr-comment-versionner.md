@@ -1,4 +1,4 @@
-# Comment versionner ?
+# Comment versionner votre projet ?
 
 Pour travailler en mode projet, il est important de versionner son travail. Même tout seul !
 Les raisons sont simples :
