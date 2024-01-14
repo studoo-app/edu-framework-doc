@@ -23,4 +23,8 @@
 
     <toc-element topic="fr-comment-installer-services.md"/>
 
+    <toc-element toc-title="Documentation">
+        <toc-element topic="fr-arborescence.md"/>
+    </toc-element>
+
 </instance-profile>
