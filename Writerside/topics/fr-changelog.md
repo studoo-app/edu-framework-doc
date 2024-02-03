@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.1
+### Fix :
+- Fix sur path Config (mode strict)
+
 ## v0.5.0
 ### New feature :
 - Activation de la gestion des erreurs (dump)
