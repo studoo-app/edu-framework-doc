@@ -4,6 +4,7 @@
     <variables>
         <primary-color>forest</primary-color>
         <header-logo>studoo.png</header-logo>
+        <custom-favicons>studoo.png</custom-favicons>
     </variables>
     <build-profile instance="e"/>
     <footer>
