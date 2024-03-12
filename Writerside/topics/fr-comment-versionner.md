@@ -61,3 +61,19 @@ git commit -m 'init project'
 ````Bash
 git push -u origin main
 ````
+
+# Erreur de push
+
+Si vous avez des erreurs lors du push, voici quelques commandes pour vous aider :
+
+Afficher les URL des dépôts (repository) GIT configurés dans votre projet :
+
+````Bash
+git remote show origin
+````
+
+Pour effacer URL de l'origine (origin) qui est déjà configurée dans votre GIT :
+````Bash
+git remote rm origin
+````
+
