@@ -3,8 +3,8 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <variables>
         <primary-color>forest</primary-color>
-        <header-logo>studoo.png</header-logo>
-        <custom-favicons>studoo.png</custom-favicons>
+        <header-logo>studoo.svg</header-logo>
+        <custom-favicons>studoo.svg</custom-favicons>
     </variables>
     <build-profile instance="e"/>
     <footer>
