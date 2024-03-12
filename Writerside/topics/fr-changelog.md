@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.6.0
+### Fix :
+- Add commande pour lancer la creation d'un controller
+- Fix Request getVars
+- Clean code 
+
 ## v0.5.1
 ### Fix :
 - Fix sur path Config (mode strict)
