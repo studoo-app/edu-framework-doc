@@ -35,7 +35,7 @@ Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer a
             </p>
         </warning>
         <code-block lang="Bash">
-        mkdir bin && curl -sS https:\/\/raw.githubusercontent.com\/studoo-app\/edu-framework\/main\/bin\/edu -o bin\/edu
+        mkdir bin &amp;&amp; curl -sS https://raw.githubusercontent.com/studoo-app/edu-framework/main/bin/edu -o bin/edu
         </code-block>
     </tab>
 </tabs>
