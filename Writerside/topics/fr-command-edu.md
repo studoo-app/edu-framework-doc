@@ -8,7 +8,7 @@ php bin/edu
 ```
 
 Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer avec les commandes suivantes :
-(exemple d'erreur : Could not open input file: bin/edu)
+(exemple d'erreur : Could not open input file)
 
 <tabs>
     <tab title="WINDOWS">
