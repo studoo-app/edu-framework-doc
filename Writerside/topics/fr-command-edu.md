@@ -26,9 +26,6 @@ Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer a
         scoop install main/curl
         </code-block>
         Quitter le terminal et ouvrir un nouveau terminal à la racine de votre projet
-        <code-block lang="Bash">
-        mkdir bin && curl -o bin/edu https://raw.githubusercontent.com/studoo-app/edu-framework/main/bin/edu
-        </code-block>
     </tab>
     <tab title="MAC OS">
         Pour installer command "edu", suivre les instructions :
@@ -37,8 +34,5 @@ Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer a
                 Ouvrir un terminal git bash à la racine de votre projet
             </p>
         </warning>
-        <code-block lang="Bash">
-        mkdir bin && curl -sS https://raw.githubusercontent.com/studoo-app/edu-framework/main/bin/edu -o bin/edu
-        </code-block>
     </tab>
 </tabs>
