@@ -13,9 +13,11 @@ Voici la liste des composants nécessaires pour assurer le bon déroulement du p
 
 Tableau des versions obligatoires :
 
-| Composants | Version |
-|------------|---------|
-| GIT        | >= ^2.0 |
-| PHP        | >= ^8.1 |
-| COMPOSER   | >= ^2.0 |
+| Composants       | Version |
+|------------------|---------|
+| GIT              | >= ^2.0 |
+| PHP              | >= ^8.1 |
+| COMPOSER         | >= ^2.0 |
+| EXT PHP OPENSSL  |  |
+| EXT PHP MBSTRING |  |
 

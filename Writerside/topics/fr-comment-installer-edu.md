@@ -26,6 +26,10 @@ Saisir cette commande dans votre terminal :
 composer create-project studoo/edu-framework-skeleton NOM_DU_PROJET
 ````
 
+> Attention, cette commande peut comporter des erreurs si vous n'avez pas installé PHP. \
+> Voir le chapitre "Erreur d'intallation du projet"
+> {style="warning"}
+
 Exemple d'affichage suite à la commande :
 
 ````Bash
@@ -76,6 +80,56 @@ Il est important de connaitre les étapes d'installation. Cela va vous permettre
 > Résultat de toutes les opérations. Des messages d'alerte concernant les mises à jour peuvent être générés dans cette section. \
 > {style="tip"}
 
+## Erreur d'intallation du projet
+
+Si vous rencontrez des erreurs lors de l'installation du projet, voici quelques explications pour vous aider :
+
+### OpenSSL extension
+````Bash
+The openssl extension is required for SSL/TLS protection but is not availab
+  le. If you can not enable the openssl extension, you can disable this error
+  , at your own risk, by setting the 'disable-tls' option to true.
+````
+Vous devez activer l'extension openssl dans votre fichier php.ini. \
+Pour savoir ou se trouve votre fichier php.ini, vous pouvez utiliser la commande suivante :
+
+````Bash
+php --ini
+````
+Vous aurez un résultat similaire à celui-ci :
+
+````Bash
+Configuration File (php.ini) Path: /usr/local/etc/php/8.0
+Loaded Configuration File:         /usr/local/etc/php/8.0/php.ini
+Scan for additional .ini files in: /usr/local/etc/php/8.0/conf.d
+Additional .ini files parsed:      /usr/local/etc/php/8.0/conf.d/ext-opcache.ini
+````
+Dans cet exemple, le fichier php.ini se trouve dans le dossier "/usr/local/etc/php/8.0". \
+
+Pour cela, vous devez ouvrir votre fichier php.ini et décommenter la ligne suivante :
+
+````Bash
+;extension=openssl
+````
+Enlever le point-virgule pour activer l'extension.
+
+### mbstring extension
+````Bash
+Cannot use studoo/edu-framework-skeleton's latest version v1.3.0 as it requires ext-mbstring * which is missing from your platform.
+ 
+In CreateProjectCommand.php line 421:
+ 
+  Could not find package studoo/edu-framework-skeleton with stability stable in a version installa
+  ble using your PHP version, PHP extensions and Composer version.
+````
+ 
+Pour cela, vous devez ouvrir votre fichier php.ini et décommenter la ligne suivante :
+
+````Bash
+;extension=mbstring
+````
+Enlever le point-virgule pour activer l'extension.
+
 # Initialiser votre projet
 
 Le projet vient de s'installer, la prochaine étape est d'initialiser les fichiers de configuration. \
@@ -109,4 +163,5 @@ Si vous démarrez votre serveur applicatif **sans le fichier ".env"** (Dotenv), 
 Fatal error: Uncaught Dotenv\Exception\InvalidPathException: 
 Unable to read any of the environment file(s) at [...]
 ````
+
 

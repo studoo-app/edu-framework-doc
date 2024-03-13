@@ -44,3 +44,37 @@ Zend Engine v4.1.21, Copyright (c) Zend Technologies
         </code-block>
     </tab>
 </tabs>
+
+## Activation des extensions
+
+### Ou se trouve votre fichier php.ini
+Pour savoir ou se trouve votre fichier php.ini, vous pouvez utiliser la commande suivante :
+
+````Bash
+php --ini
+````
+Vous aurez un résultat similaire à celui-ci :
+
+````Bash
+Configuration File (php.ini) Path: /usr/local/etc/php/8.0
+Loaded Configuration File:         /usr/local/etc/php/8.0/php.ini
+Scan for additional .ini files in: /usr/local/etc/php/8.0/conf.d
+Additional .ini files parsed:      /usr/local/etc/php/8.0/conf.d/ext-opcache.ini
+````
+Dans cet exemple, le fichier php.ini se trouve dans le dossier "/usr/local/etc/php/8.0". \
+
+### OpenSSL extension
+Pour cela, vous devez ouvrir votre fichier php.ini et décommenter la ligne suivante :
+
+````Bash
+;extension=openssl
+````
+Enlever le point-virgule pour activer l'extension.
+
+### mbstring extension
+Pour cela, vous devez ouvrir votre fichier php.ini et décommenter la ligne suivante :
+
+````Bash
+;extension=mbstring
+````
+Enlever le point-virgule pour activer l'extension.
