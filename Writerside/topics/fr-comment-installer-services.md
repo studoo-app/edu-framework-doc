@@ -17,9 +17,9 @@ composer edu:init
 Puis taper la commande suivante pour démarrer les services :
 
 ```Shell
-composer edu:docker:db-service:start <service>
+composer edu:docker:db-service:start SERVICE
 ```
-> Remplacer `<service>` par le nom du service que vous souhaitez démarrer. mysql ou mariadb
+> Remplacer **SERVICE** par le nom du service que vous souhaitez démarrer. mysql ou mariadb
 {style="info"}
 
 

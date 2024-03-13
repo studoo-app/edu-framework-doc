@@ -28,14 +28,14 @@ git init
 
 - Ajout de l'URL du dépôt (repository) GIT
 
-> Remplacez **\<URL GIT SSH>** par le URL du repository lors sa création \
+> Remplacez **URL_GIT_SSH** par le URL du repository lors sa création \
 > Copier URL SSH qui se trouve dans le service GIT (ex : GITHUB) du repository \
 > Voici un exemple : \
 > "git remote add origin git@github.com:bfoujols/Testing-Edu-Frame.git" \
 {style="warning"}
 
 ````Bash
-git remote add origin <URL GIT SSH>
+git remote add origin URL_GIT_SSH
 ````
 
 - Ajout de la branche "main"
