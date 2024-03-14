@@ -23,10 +23,11 @@
 
     <toc-element topic="fr-comment-installer-services.md"/>
 
+    <toc-element topic="fr-command-edu.md"/>
+
     <toc-element toc-title="Documentation">
         <toc-element topic="fr-arborescence.md"/>
         <toc-element topic="fr-mvc-edu.md"/>
-        <toc-element topic="fr-command-edu.md"/>
     </toc-element>
 
 </instance-profile>
