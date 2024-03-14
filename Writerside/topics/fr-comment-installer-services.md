@@ -23,7 +23,7 @@ composer edu:docker:db-service:start SERVICE
 {style="info"}
 
 
-## Installer les services sur votre machine
+## Ou installer les services sur votre machine
 
 > Nous vous recommandons d'utiliser Docker pour émuler les services. Cela vous permettra de gagner du temps et de simplifier le processus de développement.
 > Installer les services directement sur votre machine peut être plus complexe et plus long. Il fige également les versions des services installés.
