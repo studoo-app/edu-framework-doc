@@ -15,7 +15,7 @@ Le modèle est indépendant de l'interface utilisateur et des mécanismes de con
 
 ## Vue (View)
 La vue est la partie de l'application qui gère l'affichage des données à l'utilisateur. Elle se charge de la présentation et de la mise en forme des informations provenant du modèle. \
-La vue est passive, ce qui signifie qu'elle ne traite pas les événements utilisateur ni ne modifie les données directement. Elle se contente d'afficher les données et de transmettre les actions de l'utilisateur au contrôleur. \
+La vue est passive, ce qui signifie qu'elle ne traite pas les événements utilisateur ni ne modifie les données directement. Elle se contente d'afficher les données et de transmettre les actions de l'utilisateur au contrôleur. 
 
 **Interaction :** La vue interagit avec le contrôleur et récupère également les données du modèle via le contrôleur pour les afficher à l'écran. \
 **Technique :** La couche Vue est souvent associée à un moteur de Template (Template engine) pour la gestion et la flexibilité des formats d'affichage. \
@@ -23,7 +23,7 @@ La vue est passive, ce qui signifie qu'elle ne traite pas les événements utili
 
 ## Contrôleur (Controller)
 Le contrôleur est l'intermédiaire entre le modèle et la vue. Il gère les événements utilisateur, effectue les traitements nécessaires et coordonne les mises à jour entre le modèle et la vue. \
-Le contrôleur interprète les actions de l'utilisateur, manipule les données du modèle en conséquence et met à jour la vue pour refléter les changements. \
+Le contrôleur interprète les actions de l'utilisateur, manipule les données du modèle en conséquence et met à jour la vue pour refléter les changements. 
 
 **Interaction :** Le contrôleur interagit avec la vue en recevant les événements utilisateur et en mettant à jour la vue avec les nouvelles données provenant du modèle. Il interagit avec le modèle en appelant les méthodes appropriées pour manipuler les données et récupérer les informations nécessaires à l'affichage dans la vue.
 
