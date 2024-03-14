@@ -1,15 +1,17 @@
 # Le MVC, c'est quoi ?
-Edu Framework utilise le modèle MVC pour organiser et structurer les applications web.
-MVC (Model-View-Controller) est l'un des modèles (software design pattern) les plus anciens et les plus utilisés. Il sépare les préoccupations en trois composants - le modèle contient les données et la logique métier, la vue affiche l'interface utilisateur et le contrôleur gère l'entrée de l'utilisateur et coordonne le modèle et la vue. MVC facilite la maintenance du code en découplant l'interface utilisateur de la logique métier.
+Edu Framework utilise le modèle MVC pour organiser et structurer les applications web. \
+MVC (Model-View-Controller) est l'un des modèles (software design pattern) les plus anciens et les plus utilisés. \
+Il sépare les préoccupations en trois composants - le modèle contient les données et la logique métier, la vue affiche l'interface utilisateur et le contrôleur gère l'entrée de l'utilisateur et coordonne le modèle et la vue. \
+MVC facilite la maintenance du code en découplant l'interface utilisateur de la logique métier.
 
 ## Modèle (Model)
 Le modèle représente les données et la logique métier de l'application. Il se charge de gérer les données, leur structure, leur cohérence et leurs relations. \
 Il encapsule les règles métier, les opérations de lecture et d'écriture dans la base de données ou tout autre système de stockage, et fournit une interface pour interagir avec ces données. \
-Le modèle est indépendant de l'interface utilisateur et des mécanismes de contrôle. \
+Le modèle est indépendant de l'interface utilisateur et des mécanismes de contrôle. 
 
 **Interaction :** Le modèle interagit avec la couche de contrôleur en fournissant des méthodes permettant au contrôleur de manipuler les données et de récupérer les informations nécessaires à l'affichage dans la vue. \
 **Technique :** La couche modèle est souvent associée à un ORM (Object-Relational Mapping) pour la gestion du CRUD (Create, Read, Update, Delete) \
-**Mots clé :** logique métier, data, ORM, CRUD \
+**Mots clé :** logique métier, data, ORM, CRUD 
 
 ## Vue (View)
 La vue est la partie de l'application qui gère l'affichage des données à l'utilisateur. Elle se charge de la présentation et de la mise en forme des informations provenant du modèle. \
@@ -17,7 +19,7 @@ La vue est passive, ce qui signifie qu'elle ne traite pas les événements utili
 
 **Interaction :** La vue interagit avec le contrôleur et récupère également les données du modèle via le contrôleur pour les afficher à l'écran. \
 **Technique :** La couche Vue est souvent associée à un moteur de Template (Template engine) pour la gestion et la flexibilité des formats d'affichage. \
-**Mots clé :** Moteur de template \
+**Mots clé :** Moteur de template 
 
 ## Contrôleur (Controller)
 Le contrôleur est l'intermédiaire entre le modèle et la vue. Il gère les événements utilisateur, effectue les traitements nécessaires et coordonne les mises à jour entre le modèle et la vue. \
