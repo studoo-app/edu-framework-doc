@@ -5,7 +5,7 @@
         <primary-color>forest</primary-color>
         <header-logo>studoo.svg</header-logo>
         <custom-favicons>studoo.svg</custom-favicons>
-        <download-title>Get EDU Frame</download-title>
+        <download-title>Github EDU Framework</download-title>
         <download-page>https://github.com/studoo-app/edu-framework</download-page>
         <showDownloadButton>true</showDownloadButton>
     </variables>
