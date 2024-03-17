@@ -25,6 +25,8 @@
 
     <toc-element topic="fr-command-edu.md"/>
 
+    <toc-element topic="fr-start-edu.md"/>
+
     <toc-element toc-title="Documentation">
         <toc-element topic="fr-arborescence.md"/>
         <toc-element topic="fr-mvc-edu.md"/>
