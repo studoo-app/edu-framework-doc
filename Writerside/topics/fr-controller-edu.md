@@ -23,4 +23,13 @@ test-controller:
   httpMethod: [GET]
 ```
 
-Vous pouvez accéder à votre controller en tapant l'url suivante : http://localhost:8042/test
+Vous pouvez accéder à votre controller en tapant l'url suivante : [http://localhost:8042/test-controller](http://localhost:8042/test-controller)
+
+Vous pouvez modifier le fichier des routes "config/routes.yaml" pour changer l'url de votre controller.
+
+```YAML
+test-controller:
+  uri: /test
+  controller: Controller\TestControllerController
+  httpMethod: [GET]
+```

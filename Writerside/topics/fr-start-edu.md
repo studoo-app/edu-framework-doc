@@ -6,4 +6,4 @@ Pour démarrer l'application, il suffit de lancer la commande suivante :
 composer edu:start
 ```
 
-Cette commande va démarrer le serveur de développement à l'adresse `http://localhost:8042`.
+Cette commande va démarrer le serveur de développement à l'adresse [http://localhost:8042](http://localhost:8042).
