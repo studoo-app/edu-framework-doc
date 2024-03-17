@@ -56,12 +56,12 @@ php --ini
 Vous aurez un résultat similaire à celui-ci :
 
 ````Bash
-Configuration File (php.ini) Path: /usr/local/etc/php/8.0
-Loaded Configuration File:         /usr/local/etc/php/8.0/php.ini
-Scan for additional .ini files in: /usr/local/etc/php/8.0/conf.d
-Additional .ini files parsed:      /usr/local/etc/php/8.0/conf.d/ext-opcache.ini
+Configuration File (php.ini) Path: /usr/local/etc/php/8.1
+Loaded Configuration File:         /usr/local/etc/php/8.1/php.ini
+Scan for additional .ini files in: /usr/local/etc/php/8.1/conf.d
+Additional .ini files parsed:      /usr/local/etc/php/8.1/conf.d/ext-opcache.ini
 ````
-Dans cet exemple, le fichier php.ini se trouve dans le dossier "/usr/local/etc/php/8.0". \
+Dans cet exemple, le fichier php.ini se trouve dans le dossier "/usr/local/etc/php/8.1". \
 
 ### OpenSSL extension
 Pour cela, vous devez ouvrir votre fichier php.ini et décommenter la ligne suivante :
@@ -76,5 +76,13 @@ Pour cela, vous devez ouvrir votre fichier php.ini et décommenter la ligne suiv
 
 ````Bash
 ;extension=mbstring
+````
+Enlever le point-virgule pour activer l'extension.
+
+### pdo_mysql extension
+Pour cela, vous devez ouvrir votre fichier php.ini et décommenter la ligne suivante :
+
+````Bash
+;extension=pdo_mysql
 ````
 Enlever le point-virgule pour activer l'extension.
