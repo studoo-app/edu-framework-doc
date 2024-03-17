@@ -7,19 +7,61 @@ Vous pouvez l'utiliser à la racine de votre projet en tapant la commande suivan
 php bin/edu make:controller NOM_DU_CONTROLLER
 ```
 
-Exemple :
+# Exemple de création d'un controller
 
 ```Shell
 php bin/edu make:controller Hello
 ```
 
-Cette commande va créer un fichier "TestController.php" dans le dossier "src/Controller". \
+### Le fichier HelloController.php
+Cette commande va créer un fichier "HelloController.php" dans le dossier "src/Controller". 
+
+```php 
+<?php
+
+namespace Controller;
+
+use Studoo\EduFramework\Core\Controller\ControllerInterface;
+use Studoo\EduFramework\Core\Controller\Request;
+use Studoo\EduFramework\Core\View\TwigCore;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+
+class HelloController implements ControllerInterface
+{
+	public function execute(Request $request): string|null
+	{
+		return TwigCore::getEnvironment()->render('hello/hello.html.twig',
+		    [
+		        "titre"   => 'HelloController',
+		        "request" => $request
+		    ]
+		);
+	}
+}
+```
+
+### Le fichier hello.html.twig
+Et va aussi créer un fichier "hello.html.twig" dans le dossier "src/Template/hello".
+
+```twig
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block content %}
+    <h1>{{ titre }}</h1>
+{% endblock %}
+```
+
+## Modifier le fichier des routes
 Et modifier le fichier des routes "config/routes.yaml" pour ajouter la route de votre controller.
 
 ```YAML
 hello:
   uri: /hello
-  controller: Controller\TestController
+  controller: Controller\HelloController
   httpMethod: [GET]
 ```
 
@@ -28,10 +70,14 @@ Vous pouvez accéder à votre controller en tapant l'url suivante : [http://loca
 Vous pouvez modifier le fichier des routes "config/routes.yaml" pour changer l'url de votre controller.
 Remplacer "/hello" par "/bonjour" par exemple.
 
-```YAML
+```diff
+--- config/routes.yaml
++++ config/routes.yaml
+ @@ -1,5 +1,5 @@
 hello:
-  uri: /bonjour
-  controller: Controller\TestControllerController
+-  uri: /hello
++  uri: /bonjour
+  controller: Controller\HelloController
   httpMethod: [GET]
 ```
 Vous pouvez accéder à votre controller en tapant l'url suivante : [http://localhost:8042/bonjour](http://localhost:8042/bonjour)
