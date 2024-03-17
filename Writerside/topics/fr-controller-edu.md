@@ -1,4 +1,4 @@
-# Comment faire un controller
+# Comment faire un controller ?
 
 Pour créer un controller, vous pouvez utiliser la commande "edu" à la racine de votre projet. \
 Vous pouvez l'utiliser à la racine de votre projet en tapant la commande suivante :

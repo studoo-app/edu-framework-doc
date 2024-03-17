@@ -1,0 +1,96 @@
+# Comment faire un post dans un controller ?
+
+Pour créer un post dans un controller, il faut faire un formulaire dans le fichier twig et un traitement dans le controller.
+
+## Les étapes pour créer un post dans un controller
+
+- Modifier le fichire de configuration des routes "config/routes.yaml"
+- Créer un formulaire dans le fichier twig
+- Créer un traitement dans le controller
+
+### Modifier le fichier de configuration des routes
+
+Selectionner dans le fichier "config/routes.yaml" la route de votre controller et ajouter la méthode POST.
+
+Exemple de la route /hello :
+
+```diff
+--- config/routes.yaml
++++ config/routes.yaml
+@@ -1,5 +1,5 @@
+hello:
+  uri: /hello
+  controller: Controller\TestControllerController
+-  httpMethod: [GET]
++  httpMethod: [GET, POST]
+```
+
+### Créer un formulaire dans le fichier twig
+
+Créer un formulaire en methode POST dans le fichier twig pour envoyer les données au controller.
+
+Exemple de formulaire :
+
+```diff
+--- template/hello/hello.html.twig
++++ template/hello/hello.html.twig
+@@ 0,12 +12,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block content %}
+    <h1>{{ titre }}</h1>
++    {% if ville is not null %}
++        <div class="alert alert-success" role="alert">
++            La ville est {{ ville }}
++        </div>
++    {% endif %}
++
++    <p>Créer une nouvelle ville</p>
++    <form action="/hello" method="post">
++        <label for="ville">Ville</label>
++        <input type="text" id="ville" name="ville">
++        <input type="submit" value="Envoyer">
++    </form>
+{% endblock %}
+```
+
+Je vous invite à regarder la documentation de [Twig](https://twig.symfony.com/doc/3.x/) pour plus d'informations sur les formulaires.
+
+### Créer un traitement dans le controller
+
+Créer un traitement dans le controller pour récupérer les données du formulaire.
+
+Exemple de traitement :
+
+```diff
+--- src/Controller/HelloController.php
++++ src/Controller/HelloController.php
+@@ -1,23 +1,23 @@
+<?php
+
+namespace Controller;
+
+use Studoo\EduFramework\Core\Controller\ControllerInterface;
+use Studoo\EduFramework\Core\Controller\Request;
+use Studoo\EduFramework\Core\View\TwigCore;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+
+class HelloController implements ControllerInterface
+{
+	public function execute(Request $request): string|null
+	{
+		return TwigCore::getEnvironment()->render('hello/hello.html.twig',
+		    [
+		        "titre"   => 'HelloController',
+- 		        "request" => $request
++ 		        "ville" => $request->get('ville')
+		    ]
+		);
+	}
+}
+```
+
