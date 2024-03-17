@@ -10,26 +10,28 @@ php bin/edu make:controller NOM_DU_CONTROLLER
 Exemple :
 
 ```Shell
-php bin/edu make:controller TestController
+php bin/edu make:controller Hello
 ```
 
 Cette commande va créer un fichier "TestController.php" dans le dossier "src/Controller". \
 Et modifier le fichier des routes "config/routes.yaml" pour ajouter la route de votre controller.
 
 ```YAML
-test-controller:
-  uri: /test-controller
-  controller: Controller\TestControllerController
+hello:
+  uri: /hello
+  controller: Controller\TestController
   httpMethod: [GET]
 ```
 
-Vous pouvez accéder à votre controller en tapant l'url suivante : [http://localhost:8042/test-controller](http://localhost:8042/test-controller)
+Vous pouvez accéder à votre controller en tapant l'url suivante : [http://localhost:8042/hello](http://localhost:8042/hello)
 
 Vous pouvez modifier le fichier des routes "config/routes.yaml" pour changer l'url de votre controller.
+Remplacer "/hello" par "/bonjour" par exemple.
 
 ```YAML
-test-controller:
-  uri: /test
+hello:
+  uri: /bonjour
   controller: Controller\TestControllerController
   httpMethod: [GET]
 ```
+Vous pouvez accéder à votre controller en tapant l'url suivante : [http://localhost:8042/bonjour](http://localhost:8042/bonjour)
