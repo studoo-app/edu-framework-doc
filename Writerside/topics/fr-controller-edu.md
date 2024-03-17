@@ -81,3 +81,8 @@ hello:
   httpMethod: [GET]
 ```
 Vous pouvez accéder à votre controller en tapant l'url suivante : [http://localhost:8042/bonjour](http://localhost:8042/bonjour)
+
+# schema pour comprendre le fonctionnement pour aller vers controller
+
+<img src="controller.svg" alt="Alt text" width="100%"/>
+
