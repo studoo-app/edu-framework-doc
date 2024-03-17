@@ -28,6 +28,7 @@
     <toc-element toc-title="Documentation">
         <toc-element topic="fr-arborescence.md"/>
         <toc-element topic="fr-mvc-edu.md"/>
+        <toc-element topic="fr-controller-edu.md"/>
     </toc-element>
 
 </instance-profile>
