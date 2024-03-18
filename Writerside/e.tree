@@ -32,6 +32,7 @@
         <toc-element topic="fr-mvc-edu.md"/>
         <toc-element topic="fr-controller-edu.md"/>
         <toc-element topic="fr-controller-post-edu.md"/>
+        <toc-element topic="fr-error-edu.md"/>
     </toc-element>
 
 </instance-profile>
