@@ -42,3 +42,33 @@ Si vous ne voulez pas activer votre base de donnée, vous pouvez déactiver :
 ## pour activer la connexion à la base de données, il faut mettre DB_HOST_STATUS=true
 DB_HOST_STATUS=false
 ````
+
+## Si vous ne parvenez pas à vous connecter à votre base de données
+
+Si vous ne parvenez pas à vous connecter à votre base de données, vous pouvez vérifier les points suivants :
+
+- Dans le fichier `docker/docker-compose-***.yml` (*** remplacer par la version et le type de base de donnée), vérifiez que la configuration `networks` est bien renseignée
+
+````
+   database:
+    container_name: ${APP_NAME}-database
+    image: mysql:5.7
+    platform: linux/amd64
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      #MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      #MYSQL_USER: app_db_user
+      #MYSQL_PASSWORD: app_db_password
++    networks:
++      - dev
+    volumes:
+      - ../var/dbdata:/var/lib/mysql
+````
+
+> Attention de bien respecter indentation et les espaces dans le fichier docker-compose
+> {style="warning"}
+  

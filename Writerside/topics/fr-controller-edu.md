@@ -71,9 +71,6 @@ Vous pouvez modifier le fichier des routes "config/routes.yaml" pour changer l'u
 Remplacer "/hello" par "/bonjour" par exemple.
 
 ```diff
---- config/routes.yaml
-+++ config/routes.yaml
- @@ -1,5 +1,5 @@
 hello:
 -  uri: /hello
 +  uri: /bonjour

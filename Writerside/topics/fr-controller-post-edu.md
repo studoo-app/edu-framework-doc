@@ -15,9 +15,6 @@ Selectionner dans le fichier "config/routes.yaml" la route de votre controller e
 Exemple de la route /hello :
 
 ```diff
---- config/routes.yaml
-+++ config/routes.yaml
-@@ -1,5 +1,5 @@
 hello:
   uri: /hello
   controller: Controller\TestControllerController
@@ -32,9 +29,6 @@ Créer un formulaire en methode POST dans le fichier twig pour envoyer les donn�
 Exemple de formulaire :
 
 ```diff
---- template/hello/hello.html.twig
-+++ template/hello/hello.html.twig
-@@ 0,12 +12,12 @@
 {% extends "base.html.twig" %}
 
 {% block title %}{{ titre }}{% endblock %}
@@ -65,9 +59,6 @@ Créer un traitement dans le controller pour récupérer les données du formula
 Exemple de traitement :
 
 ```diff
---- src/Controller/HelloController.php
-+++ src/Controller/HelloController.php
-@@ -1,23 +1,23 @@
 <?php
 
 namespace Controller;
