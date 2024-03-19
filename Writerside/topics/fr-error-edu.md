@@ -63,8 +63,8 @@ Si vous ne parvenez pas à vous connecter à votre base de données, vous pouvez
       MYSQL_DATABASE: ${DB_NAME}
       #MYSQL_USER: app_db_user
       #MYSQL_PASSWORD: app_db_password
-+    networks:
-+      - dev
++   networks:
++     - dev
     volumes:
       - ../var/dbdata:/var/lib/mysql
   #PHP My Admin
@@ -85,4 +85,10 @@ Si vous ne parvenez pas à vous connecter à votre base de données, vous pouvez
 
 > Attention de bien respecter indentation et les espaces dans le fichier docker-compose
 > {style="warning"}
+
+Supprimez votre environnement docker
+
+````Shell
+  docker-compose down
+````
   
