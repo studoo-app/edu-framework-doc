@@ -67,6 +67,20 @@ Si vous ne parvenez pas à vous connecter à votre base de données, vous pouvez
 +      - dev
     volumes:
       - ../var/dbdata:/var/lib/mysql
+  #PHP My Admin
+  phpmyadmin:
+    container_name: ${APP_NAME}-pma
+    image: phpmyadmin:latest
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - "8081:80"
+    environment:
+-      PMA_HOST: db
++      PMA_HOST: database
+    networks:
+      - dev
 ````
 
 > Attention de bien respecter indentation et les espaces dans le fichier docker-compose
