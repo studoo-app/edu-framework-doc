@@ -29,6 +29,10 @@ Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer a
         <code-block lang="Bash">
         mkdir bin &amp;&amp; curl -o bin/edu https://raw.githubusercontent.com/studoo-app/edu-framework/main/bin/edu
         </code-block>
+        Si vous rencontrez une erreur `curl: (35) schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.`
+        <code-block lang="Bash">
+        curl --ssl-no-revoke -o bin/edu https://raw.githubusercontent.com/studoo-app/edu-framework/main/bin/edu
+        </code-block>
     </tab>
     <tab title="MAC OS">
         Pour installer command "edu", suivre les instructions :
