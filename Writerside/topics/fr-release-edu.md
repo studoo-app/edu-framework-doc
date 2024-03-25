@@ -1,4 +1,4 @@
-# Relase Notes
+# Release Notes
 
 Présentation des versions du framework.
 
