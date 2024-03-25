@@ -2,6 +2,10 @@
 
 Présentation des versions du framework.
 
+## v1.2 (03/2024)
+- ajout de la commande `php bin/edu start` pour démarrer le serveur de développement
+- ajout de la commande `php bin/edu check:config` pour vérifier la configuration du framework
+
 ## v1.1 (03/2024)
 Version beta de la bar de debug avec les fonctionnalités suivantes :
 - Mise en place de la bar de debug en beta sur environnement de développement
