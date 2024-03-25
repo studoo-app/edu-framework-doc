@@ -24,9 +24,10 @@ Version stable du framework avec les fonctionnalités suivantes :
 - Création de route
 - Mise en place de la base de données
 
-## v0.5 à v0.1 (2022-2023)
+## v0.1 à v0.5 (2022-2023)
 Versions de développement du framework avec les fonctionnalités suivantes :
-- Mise en place de l'architecture du framework (MVC)
+- Mise en place et conception de l'architecture du framework (MVC)
+- plusieurs POC des couches du MVC
 - Tests unitaires
 - Mise en place de la documentation du framework (Writerside)
 - Gestion de la configuration du framework (DotEnv)
