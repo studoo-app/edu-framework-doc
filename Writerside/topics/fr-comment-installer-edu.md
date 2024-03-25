@@ -190,7 +190,7 @@ Pour résoudre ce problème, plusieurs solutions s'offrent à vous :
 
 Dans le fichier composer.json, vous devez modifier la ligne suivante :
 
-````diff
+````
 "require": {
 -     "studoo/edu-framework": "dev-main"
 +     "studoo/edu-framework": "1.2.x-dev"
