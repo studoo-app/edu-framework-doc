@@ -188,4 +188,11 @@ Pour résoudre ce problème, plusieurs solutions s'offrent à vous :
  - vous devez supprimer le fichier "composer.lock" et relancer la commande "composer install"
  - vous devez mettre à jour la version de votre projet dans le fichier "composer.json" et relancer la commande "composer install"
 
+Dans le fichier composer.json, vous devez modifier la ligne suivante :
 
+````diff
+"require": {
+-     "studoo/edu-framework": "dev-main"
++     "studoo/edu-framework": "1.2.x-dev"
+}
+````
