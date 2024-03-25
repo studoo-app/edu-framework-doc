@@ -18,12 +18,22 @@ pwd // pour savoir ou vous êtes dans votre arboresence
 Nous allons créer le projet à l'aide du gestionnaire de paquets "composer". Cette étape vous permettra de construire la base du projet en une seule ligne de commande.
 
 > Remplacez **NOM_DU_PROJET** par le nom de votre projet
+> Remplacez **VERSION** par la version souhaitée (ex : 1.2.x-dev)
 > {style="warning"}
+
+Tableau des versions EDU-Framework :
+
+| Version   | Etat                                               | Date sortie |
+|-----------|----------------------------------------------------|-------------|
+| 1.3.x-dev | beta                                               | en cours    |
+| 1.2.x-dev | <a href="fr-release-edu.md">stable</a> | 01/03/2024  |
+
+<a href="fr-release-edu.md">Lien sur les informations des releases EduFrame</a>
 
 Saisir cette commande dans votre terminal :
 
 ````Bash
-composer create-project studoo/edu-framework-skeleton NOM_DU_PROJET
+composer create-project studoo/edu-framework-skeleton NOM_DU_PROJET VERSION
 ````
 
 > Attention, cette commande peut comporter des erreurs si vous n'avez pas installé PHP. \
@@ -163,5 +173,19 @@ Si vous démarrez votre serveur applicatif **sans le fichier ".env"** (Dotenv), 
 Fatal error: Uncaught Dotenv\Exception\InvalidPathException: 
 Unable to read any of the environment file(s) at [...]
 ````
+
+# Erreur d'installation des dépendances
+
+Au moment de la commande "composer create-project studoo/edu-framework-skeleton ...", vous pouvez rencontrer des erreurs d'installation des dépendances. \
+Voici un exemple de message d'erreur :
+
+````Bash
+Problem 1
+- Root composer.json requires studoo/edu-framework dev-main, found studoo/edu-framework[dev-dev, v0.2.1, ..., v0.6.0, v1.0.0, ..., 1.4.x-dev] but it does not match the constraint.
+````
+
+Pour résoudre ce problème, plusieurs solutions s'offrent à vous :
+ - vous devez supprimer le fichier "composer.lock" et relancer la commande "composer install"
+ - vous devez mettre à jour la version de votre projet dans le fichier "composer.json" et relancer la commande "composer install"
 
 
