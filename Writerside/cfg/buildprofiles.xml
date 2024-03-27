@@ -12,18 +12,8 @@
         <algolia-index>prod_edu_framework</algolia-index>
         <algolia-api-key>82302525f2a0749f31e684491f8a1432</algolia-api-key>
         <web-root>https://studoo-app.github.io/edu-framework-doc</web-root>
-        <versions-switcher>https://raw.githubusercontent.com/studoo-app/edu-framework-doc/main/Writerside/help-versions.json</versions-switcher>
     </variables>
-    <build-profile instance="e">
-        <variables>
-            <product-web-url>https://studoo-app.github.io/edu-framework-doc/1.2/</product-web-url>
-        </variables>
-    </build-profile>
-    <build-profile instance="a">
-        <variables>
-            <product-web-url>https://studoo-app.github.io/edu-framework-doc/2.0/</product-web-url>
-        </variables>
-    </build-profile>
+    <build-profile instance="e"/>
     <footer>
         <copyright>Studoo 2022-2024</copyright>
     </footer>
