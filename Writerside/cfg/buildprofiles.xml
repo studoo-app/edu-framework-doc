@@ -12,6 +12,7 @@
         <algolia-index>prod_edu_framework</algolia-index>
         <algolia-api-key>82302525f2a0749f31e684491f8a1432</algolia-api-key>
         <web-root>https://studoo-app.github.io/edu-framework-doc</web-root>
+        <versions-switcher>https://studoo-app.github.io/edu-framework-doc/help-versions.json</versions-switcher>
     </variables>
     <build-profile instance="e"/>
     <footer>
