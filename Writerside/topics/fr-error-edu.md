@@ -1,5 +1,10 @@
 # Liste des erreurs
 
+> Cette page liste les erreurs courantes que vous pourriez rencontrer lors de l'installation ou de l'utilisation du projet Edu Framework.
+> D'autres erreurs peuvent survenir, mais celles-ci sont dans les pages de la documentation.
+> Nous vous recommandons d'utiliser le moteur de recherche pour trouver des solutions à vos problèmes.
+> {style="warning"}
+
 ## Failed to listen on localhost:8042 (reason: Address already in use)
 Cette erreur vient que le port d'écoute (socket) 8042 est déjà utilisé (ou mal fermé)
 Pour résoudre cette erreur, vous pouvez "killer" le processus attaché au port d'écoute.

@@ -1,4 +1,4 @@
-# Comment installer Edu-F ?
+# Comment installer Edu Framework ?
 Comment installer le framework Edu-Framework
 
 ## Installation
@@ -23,9 +23,10 @@ Nous allons créer le projet à l'aide du gestionnaire de paquets "composer". Ce
 
 Tableau des versions EDU-Framework :
 
-| Version   | Etat                                               | Date sortie |
-|-----------|----------------------------------------------------|-------------|
-| 1.3.x-dev | beta                                               | en cours    |
+| Version   | Etat                                   | Date sortie |
+|-----------|----------------------------------------|-------------|
+| 2.0.x-dev | <a href="fr-release-edu.md">alpha</a>  | en cours    |
+| 1.3.x-dev | <a href="fr-release-edu.md">beta</a>   | en cours    |
 | 1.2.x-dev | <a href="fr-release-edu.md">stable</a> | 01/03/2024  |
 
 <a href="fr-release-edu.md">Lien sur les informations des releases EduFrame</a>

@@ -7,6 +7,14 @@ Vous pouvez l'utiliser à la racine de votre projet en tapant la commande suivan
 php bin/edu 
 ```
 
+Pour voir les commandes disponibles, vous pouvez taper la commande suivante :
+
+```Shell
+php bin/edu list
+``` 
+
+## Command no found
+
 Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer avec les commandes suivantes :
 (exemple d'erreur : Could not open input file)
 
