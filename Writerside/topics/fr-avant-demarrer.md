@@ -11,7 +11,7 @@ Voici la liste des composants nécessaires pour assurer le bon déroulement du p
 - [PHP](fr-php.md)
 - [COMPOSER](fr-composer.md)
 
-Tableau des versions obligatoires :
+Tableau des versions obligatoires et des extensions PHP nécessaires:
 
 | Composants        | Version |
 |-------------------|---------|

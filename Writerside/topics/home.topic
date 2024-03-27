@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/html-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Edu Framework" id="home">
+
+    <section-starting-page>
+        <title>Edu Framework</title>
+        <description>
+            Simple framework éducation
+        </description>
+
+        <spotlight>
+            <a href="fr-avant-demarrer.md" type="start"
+               summary="Les pré-requis pour bien démarrer"/>
+            <a href="fr-edu-framework.md" type="container"
+               summary="A qui s'adresse ce framework ?"/>
+        </spotlight>
+
+        <primary>
+            <title>Comment démarrer ?</title>
+            <a href="fr-comment-installer-edu.md" type="development" summary="Guide d'installation"/>
+            <a href="fr-comment-versionner.md" type="community" summary="Utilisation de GIT"/>
+        </primary>
+
+        <secondary>
+            <title>Explore et apprend</title>
+            <a href="fr-start-edu.md" summary="Comment démmarrer le projet"/>
+        </secondary>
+
+    </section-starting-page>
+</topic>
