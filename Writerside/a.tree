@@ -7,25 +7,5 @@
                  start-page="fr-edu-framework.md">
 
     <toc-element topic="fr-edu-framework.md"/>
-
-    <toc-element topic="fr-comment-installer-edu.md"/>
-
-    <toc-element topic="fr-comment-versionner.md"/>
-
-    <toc-element topic="fr-comment-installer-services.md"/>
-
     <toc-element topic="fr-command-edu.md"/>
-
-    <toc-element topic="fr-start-edu.md"/>
-
-    <toc-element toc-title="Documentation">
-        <toc-element topic="fr-arborescence.md"/>
-        <toc-element topic="fr-mvc-edu.md"/>
-        <toc-element topic="fr-controller-edu.md"/>
-        <toc-element topic="fr-controller-post-edu.md"/>
-        <toc-element topic="fr-error-edu.md"/>
-    </toc-element>
-
-    <toc-element topic="fr-release-edu.md"/>
-
 </instance-profile>
