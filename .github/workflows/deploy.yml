@@ -14,6 +14,9 @@ env:
   ARTIFACT: webHelpE2-all.zip
   DOCKER_VERSION: 233.14938
   ALGOLIA_ARTIFACT: algolia-indexes-E.zip
+  CONFIG_JSON_PRODUCT: E
+  CONFIG_JSON_VERSION: 2.0
+
 
 jobs:
   build:
@@ -94,9 +97,9 @@ jobs:
           unzip -O UTF-8 -qq '${{ env.ALGOLIA_ARTIFACT }}' -d algolia-indexes
           env algolia-key='${{secrets.ALGOLIA_KEY}}' java -jar /opt/builder/help-publication-agent.jar \
           update-index \
-          --application-name '${{vars.ALGOLIA_APP_NAME}}' \
-          --index-name '${{vars.ALGOLIA_INDEX_NAME}}' \
-          --product '${{vars.CONFIG_JSON_PRODUCT}}' \
-          --version '${{vars.CONFIG_JSON_VERSION}}' \
+          --application-name '${{ vars.ALGOLIA_APP_NAME }}' \
+          --index-name '${{ vars.ALGOLIA_INDEX_NAME }}' \
+          --product '${{ env.CONFIG_JSON_PRODUCT }}' \
+          --version '${{ env.CONFIG_JSON_VERSION }}' \
           --index-directory algolia-indexes/ \
           2>&1 | tee algolia-update-index-log.txt
