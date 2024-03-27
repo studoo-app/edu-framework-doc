@@ -14,8 +14,16 @@
         <web-root>https://studoo-app.github.io/edu-framework-doc</web-root>
         <versions-switcher>https://raw.githubusercontent.com/studoo-app/edu-framework-doc/main/Writerside/help-versions.json</versions-switcher>
     </variables>
-    <build-profile instance="e"/>
-    <build-profile instance="a"/>
+    <build-profile instance="e">
+        <variables>
+            <product-web-url>https://studoo-app.github.io/edu-framework-doc/1.2/</product-web-url>
+        </variables>
+    </build-profile>
+    <build-profile instance="a">
+        <variables>
+            <product-web-url>https://studoo-app.github.io/edu-framework-doc/2.0/</product-web-url>
+        </variables>
+    </build-profile>
     <footer>
         <copyright>Studoo 2022-2024</copyright>
     </footer>
