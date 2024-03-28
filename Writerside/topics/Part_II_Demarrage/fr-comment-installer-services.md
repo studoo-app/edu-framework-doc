@@ -8,20 +8,24 @@ Edu Framework utilise plusieurs services pour fonctionner. Pour les installer, v
 > Démarrer Docker Desktop sur votre machine
 {style="note"}
 
-Pour utiliser Docker pour émuler les services, vous pouvez suivre les instructions suivantes :
-
-````Shell
-composer edu:init
-````
-
-Puis taper la commande suivante pour démarrer les services :
-
-```Shell
-composer edu:docker:db-service:start SERVICE
-```
-> Remplacer **SERVICE** par le nom du service que vous souhaitez démarrer. mysql ou mariadb
-{style="info"}
-
+<tabs>
+    <tab title="à partir v2.0">
+        Pour installation des services, vous pouvez suivre les instructions suivantes :
+        <code-block lang="Bash">
+        docker compose up -d
+        </code-block>
+    </tab>
+    <tab title="Jusqu'en v1.2">
+        Pour utiliser Docker pour émuler les services, vous pouvez suivre les instructions suivantes :
+        <code-block lang="Bash">
+        composer edu:init
+        </code-block>
+        Puis taper la commande suivante pour démarrer les services :
+        <code-block lang="Bash">
+        composer edu:docker:db-service:start mysql
+        </code-block>
+    </tab>
+</tabs>
 
 ## (ou) Installer les services sur votre machine (non recommandé
 
