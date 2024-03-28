@@ -29,6 +29,7 @@
         <toc-element topic="fr-arborescence.md"/>
         <toc-element topic="fr-controller-edu.md"/>
         <toc-element topic="fr-controller-post-edu.md"/>
+        <toc-element topic="fr-new-command-edu.md"/>
     </toc-element>
 
     <toc-element toc-title="Annexe">
