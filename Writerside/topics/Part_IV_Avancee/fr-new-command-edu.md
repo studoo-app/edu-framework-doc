@@ -2,7 +2,7 @@
 
 Vous pouvez créer une nouvelle commande avec la commande "make:command" de la commande "edu".
 
-> Attention : cette feature est disponible a partir de v2.0
+> Attention : cette feature est disponible à partir de v2.0
 > {style="warning"}
 
 Pour créer une nouvelle commande, vous devez suivre les instructions suivantes :
