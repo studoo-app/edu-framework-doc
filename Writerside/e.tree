@@ -8,8 +8,7 @@
 
     <toc-element topic="home.topic"/>
 
-    <toc-element toc-title="Avant de démarrer">
-        <toc-element topic="fr-avant-demarrer.md"/>
+    <toc-element toc-title="Part I Prérequis" topic="fr-avant-demarrer.md">
         <toc-element topic="fr-command-line.md"/>
         <toc-element topic="fr-git.md"/>
         <toc-element topic="fr-php.md"/>
@@ -17,21 +16,22 @@
         <toc-element topic="fr-docker.md"/>
     </toc-element>
 
-    <toc-element topic="fr-comment-installer-edu.md"/>
+    <toc-element toc-title="Part II Comment démarrer ?" topic="fr-demarrage.md">
+        <toc-element topic="fr-comment-installer-edu.md"/>
+        <toc-element topic="fr-command-edu.md"/>
+        <toc-element topic="fr-start-edu.md"/>
+        <toc-element topic="fr-comment-versionner.md"/>
+        <toc-element topic="fr-comment-installer-services.md"/>
+    </toc-element>
 
-    <toc-element topic="fr-comment-versionner.md"/>
-
-    <toc-element topic="fr-comment-installer-services.md"/>
-
-    <toc-element topic="fr-command-edu.md"/>
-
-    <toc-element topic="fr-start-edu.md"/>
-
-    <toc-element toc-title="Documentation">
-        <toc-element topic="fr-arborescence.md"/>
+    <toc-element toc-title="Part III Comment débuter ?" topic="fr-construire.md">
         <toc-element topic="fr-mvc-edu.md"/>
+        <toc-element topic="fr-arborescence.md"/>
         <toc-element topic="fr-controller-edu.md"/>
         <toc-element topic="fr-controller-post-edu.md"/>
+    </toc-element>
+
+    <toc-element toc-title="Annexe">
         <toc-element topic="fr-error-edu.md"/>
     </toc-element>
 

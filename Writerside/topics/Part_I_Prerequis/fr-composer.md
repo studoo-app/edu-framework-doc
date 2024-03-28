@@ -1,6 +1,6 @@
-# COMPOSER
+# Gestionnaire de dépendance
 
-Pour gérer les installations des packages dans le projet.
+Pour gérer les installations des libraries ou des packages dans le projet, nous utilisons un gestionnaire de dépendance appelé "COMPOSER".
 
 Pour savoir si COMPOSER est installé sur votre machine, ouvrez un terminal et saisir cette commande :
 

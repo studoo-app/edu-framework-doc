@@ -20,13 +20,16 @@
 
         <primary>
             <title>Comment démarrer ?</title>
-            <a href="fr-comment-installer-edu.md" type="development" summary="Guide d'installation"/>
+            <a href="fr-demarrage.md" type="development" summary="Guide d'installation"/>
             <a href="fr-comment-versionner.md" type="community" summary="Utilisation de GIT"/>
+            <a href="fr-start-edu.md" summary="Comment démarrer l'application"/>
+            <a href="fr-comment-installer-services.md" summary="Les services Docker"/>
         </primary>
 
         <secondary>
             <title>Explore et apprend</title>
             <a href="fr-start-edu.md" summary="Comment démmarrer le projet"/>
+            <a href="fr-controller-edu.md" summary="Construire une nouvelle page"/>
         </secondary>
 
     </section-starting-page>

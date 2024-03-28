@@ -1,4 +1,4 @@
-# GIT
+# Command GIT
 
 Nous allons utiliser un système de contrôle de version distribué appelé "GIT"
 

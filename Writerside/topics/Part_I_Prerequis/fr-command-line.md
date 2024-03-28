@@ -1,4 +1,4 @@
-# COMMAND-LINE INSTALLER
+# Command-line installer
 
 Un poste de développeur (ou toute personne qui travaille dans l'informatique), se doit de bien maitriser son poste de travail. (appelé aussi "setup")
 
