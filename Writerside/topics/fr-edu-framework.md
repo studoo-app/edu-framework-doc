@@ -20,3 +20,5 @@ L'objectif pédagogique est :
 
 > Ce framework n'est pas adapté à une utilisation en production. Il est destiné à des fins pédagogiques.
 {style="warning"}
+
+Date de création : 2023-08-05
