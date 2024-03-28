@@ -1,4 +1,4 @@
-# Comment construire un nouvelle commande ?
+# Comment construire un nouvelle commande console ?
 
 Vous pouvez créer une nouvelle commande avec la commande "make:command" de la commande "edu".
 
@@ -61,3 +61,7 @@ Vous pouvez maintenant utiliser votre commande en tapant la commande suivante :
 php bin/edu gererate
 ```
 
+Pour aller plus loin, vous pouvez consulter la documentation de Symfony sur les commandes console :
+
+> [https://symfony.com/doc/current/console.html](https://symfony.com/doc/current/console.html)
+{style="tip"}
