@@ -16,7 +16,7 @@ bin/edu make:command NOM_DE_LA_COMMANDE
 # Exemple de création d'un controller
 
 ```Shell
-php bin/edu make:command gererate
+php bin/edu make:command generate
 ```
 
 ### Le fichier GenerateCommand.php
@@ -34,7 +34,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 #[\Symfony\Component\Console\Attribute\AsCommand(name: 'gererate', description: 'Renseigner la description de la commande gererate')]
-class GererateCommand extends \Studoo\EduFramework\Commands\Extends\CommandManage
+class GenerateCommand extends \Studoo\EduFramework\Commands\Extends\CommandManage
 {
 	public function execute(InputInterface $input, OutputInterface $output): int
 	{
@@ -52,13 +52,13 @@ class GererateCommand extends \Studoo\EduFramework\Commands\Extends\CommandManag
 Et modifier le fichier des commandes "config/commands.yaml" pour ajouter la commande de votre controller.
 
 ```yaml
-gererate: Command\GererateCommand
+gererate: Command\GenerateCommand
 ```
 
 Vous pouvez maintenant utiliser votre commande en tapant la commande suivante :
 
 ```Shell
-php bin/edu gererate
+php bin/edu generate
 ```
 
 Pour aller plus loin, vous pouvez consulter la documentation de Symfony sur les commandes console :

@@ -70,7 +70,7 @@ Vous pouvez accéder à votre controller en tapant l'url suivante : [http://loca
 Vous pouvez modifier le fichier des routes "config/routes.yaml" pour changer l'url de votre controller.
 Remplacer "/hello" par "/bonjour" par exemple.
 
-```diff
+```
 hello:
 -  uri: /hello
 +  uri: /bonjour
