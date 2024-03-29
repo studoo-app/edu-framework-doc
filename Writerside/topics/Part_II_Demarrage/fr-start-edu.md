@@ -3,7 +3,7 @@
 Pour démarrer l'application, il suffit de lancer la commande suivante :
 
 <tabs>
-    <tab title="à partir v2.0">
+    <tab title="à partir v1.2">
         <code-block lang="Bash">
         php bin/edu start
         </code-block>
