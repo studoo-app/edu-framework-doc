@@ -1,4 +1,4 @@
-# La commande edu 
+# La commande bin/edu 
 
 Nous avons mise en place une commande pour faciliter les taches. Cette commande est appelée "edu".
 Vous pouvez l'utiliser à la racine de votre projet en tapant la commande suivante :
@@ -13,7 +13,28 @@ Pour voir les commandes disponibles, vous pouvez taper la commande suivante :
 php bin/edu list
 ``` 
 
-## Command no found
+autre exemple, pour démarrer l'application, vous pouvez taper la commande suivante
+
+```Shell
+php bin/edu start
+```
+
+Voici les commandes disponibles :
+
+
+| Composants      | Version                                       |
+|-----------------|-----------------------------------------------|
+| start           | pour démarrer l'application                   |
+| list            | pour lister les commandes disponibles         |
+| check:config    | check la configuration de votre environnement |
+| make:controller | génération d'un controller                    |
+| make:api        | génération d'un controller type json API      |
+| make:command    | génération d'un commande line                 |
+
+
+## Si vous rencontrez une erreur
+
+### Command no found
 
 Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer avec les commandes suivantes :
 (exemple d'erreur : Could not open input file)
