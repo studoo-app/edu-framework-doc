@@ -36,6 +36,7 @@
     </toc-element>
 
     <toc-element toc-title="Annexe">
+        <toc-element topic="fr-glossaire.md"/>
         <toc-element topic="fr-error-edu.md"/>
     </toc-element>
 
