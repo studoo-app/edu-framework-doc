@@ -177,6 +177,9 @@ Une release est une version d'un logiciel qui est prête à être distribuée.
 ### Release Candidate
 Une release candidate est une version d'un logiciel qui est prête pour une utilisation en production, mais qui nécessite des tests supplémentaires.
 
+### Route
+Une route est une URL qui est associée à une action spécifique dans une application web.
+
 ## S
 
 ### SQL

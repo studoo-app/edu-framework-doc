@@ -81,5 +81,5 @@ Vous pouvez accéder à votre controller en tapant l'url suivante : [http://loca
 
 # schema pour comprendre le fonctionnement pour aller vers controller
 
-<img src="controller.svg" alt="Alt text" width="100%"/>
+<img src="controller.png" alt="schema MVC"/>
 
