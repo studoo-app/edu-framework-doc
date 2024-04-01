@@ -7,8 +7,8 @@ L'arborescence du projet est la structure de votre projet. Elle est composée de
 ```
 ├── app
 │   ├── Config
-│   │   ├── command.yaml
-│   │   └── route.yaml
+│   │   ├── commands.yaml
+│   │   └── routes.yaml
 │   ├── Controller
 │   └── Template
 │       ├── base.html.twig
@@ -39,9 +39,10 @@ Voici le détail de l'arborescence du projet :
 |-----------------------------------------------|------------------------------------------------------------------------|
 | **app**                                       | Dossier contenant les fichiers de l'application                        |
 | **app/Config**                                | Dossier contenant les fichiers de configuration                        |
-| **app/Config/command.yaml**                   | Fichier de configuration des commands                                  |
-| **app/Config/route.yaml**                     | Fichier de configuration des routes                                    |
+| **app/Config/commands.yaml**                  | Fichier de configuration des commands                                  |
+| **app/Config/routes.yaml**                    | Fichier de configuration des routes                                    |
 | **app/Controller**                            | Dossier contenant les classes "Controllers"                            | 
+| **app/Command**                               | Dossier contenant les classes "Command"                                | 
 | **app/Template**                              | Dossier contenant les fichiers des templates                           |
 | **app/Template/base.html.twig**               | Fichier du template de base                                            | 
 | **app/Template/error**                        | Dossier contenant les fichiers du template des erreurs                 |
