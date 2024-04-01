@@ -27,7 +27,7 @@
     <toc-element toc-title="Part III Comment débuter ?" topic="fr-construire.md">
         <toc-element topic="fr-mvc-edu.md"/>
         <toc-element topic="fr-arborescence.md"/>
-        <toc-element topic="fr-controller-edu.md"/>
+        <toc-element topic="fr-controller-edu.md" accepts-web-file-names="faire-un-controller.html"/>
         <toc-element topic="fr-controller-post-edu.md"/>
     </toc-element>
 
