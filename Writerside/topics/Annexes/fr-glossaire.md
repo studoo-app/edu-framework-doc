@@ -165,6 +165,11 @@ Une requête POST est une méthode de requête HTTP qui permet d'envoyer des don
 
 ## R
 
+### Refactoring
+Le refactoring est le processus de modification du code source d'un logiciel pour améliorer sa lisibilité, sa maintenabilité et sa performance, sans en changer le comportement.
+
+- [https://fr.wikipedia.org/wiki/Refactoring](https://fr.wikipedia.org/wiki/Refactoring)
+
 ### Repository
 Un dépôt (repository) est un espace de stockage qui contient les fichiers et les métadonnées d'un projet logiciel.
 
