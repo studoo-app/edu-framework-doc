@@ -42,6 +42,12 @@ class HelloController implements ControllerInterface
 }
 ```
 
+On peut voir que le controller HelloController implémente l'interface ControllerInterface. \
+La méthode execute prend en paramètre un objet de type Request et retourne une chaine de caractère ou null.
+
+> Pour aller plus loin, vous pouvez lire la documentation de la classe [Request](fr-resquet.md) pour comprendre comment gérer les requêtes HTTP.
+{style="info"}
+
 ### Le fichier hello.html.twig
 Et va aussi créer un fichier "hello.html.twig" dans le dossier "src/Template/hello".
 

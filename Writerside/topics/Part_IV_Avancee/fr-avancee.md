@@ -5,4 +5,5 @@ Après une première prise en main, vous pouvez avancer dans le développement d
 ## Les étapes pour avancer
 
 - [Comment créer un nouvelle commande console](fr-new-command-edu.md)
+- [Classe Request - La gestion des requêtes HTTP](fr-resquet.md)
 
