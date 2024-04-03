@@ -1,4 +1,4 @@
-# Gestionnaire de dépendance
+# Gérer les dépendances
 
 Pour gérer les installations des libraries ou des packages dans le projet, nous utilisons un gestionnaire de dépendance appelé "COMPOSER".
 

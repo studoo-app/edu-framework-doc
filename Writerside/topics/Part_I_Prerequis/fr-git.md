@@ -1,4 +1,4 @@
-# Command GIT
+# Versionner avec GIT
 
 Nous allons utiliser un système de contrôle de version distribué appelé "GIT"
 

@@ -1,4 +1,4 @@
-# DOCKER
+# Virtualiser avec DOCKER
 
 Pour émuler les services utilisés par le framework, comme MySQL par exemple, nous vous encourageons vivement à utiliser Docker. 
 
