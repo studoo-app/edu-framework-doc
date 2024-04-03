@@ -7,6 +7,7 @@ Pour créer un post dans un controller, il faut faire un formulaire dans le fich
 - Modifier le fichire de configuration des routes "config/routes.yaml"
 - Créer un formulaire dans le fichier twig
 - Créer un traitement dans le controller
+- Comprendre comment fonctionne la classe [Request](fr-resquet.md) pour récupérer les données du formulaire
 
 ### Modifier le fichier de configuration des routes
 
@@ -14,13 +15,17 @@ Selectionner dans le fichier "config/routes.yaml" la route de votre controller e
 
 Exemple de la route /hello :
 
-```diff
+```
 hello:
   uri: /hello
   controller: Controller\TestControllerController
 -  httpMethod: [GET]
-+  httpMethod: [GET, POST]
++  httpMethod: [GET,POST]
 ```
+
+> Dans le cas d'une erreur "405 Method Not Allowed", vérifiez que la méthode POST est bien ajoutée dans le fichier de configuration des routes.
+{style="warning"}
+
 
 ### Créer un formulaire dans le fichier twig
 
@@ -28,7 +33,7 @@ Créer un formulaire en methode POST dans le fichier twig pour envoyer les donn�
 
 Exemple de formulaire :
 
-```diff
+```
 {% extends "base.html.twig" %}
 
 {% block title %}{{ titre }}{% endblock %}
@@ -49,6 +54,10 @@ Exemple de formulaire :
 +    </form>
 {% endblock %}
 ```
+Dans cet exemple, on affiche un formulaire pour créer une nouvelle ville. \
+On récupère la ville dans le controller pour l'afficher.
+Et on affiche la ville si elle est différente de null. (condition if dans la syntaxe twig)
+L'affichage de la ville se fait par la syntaxe twig `{{ ville }}`.
 
 Je vous invite à regarder la documentation de [Twig](https://twig.symfony.com/doc/3.x/) pour plus d'informations sur les formulaires.
 
@@ -58,7 +67,7 @@ Créer un traitement dans le controller pour récupérer les données du formula
 
 Exemple de traitement :
 
-```diff
+```
 <?php
 
 namespace Controller;
@@ -84,4 +93,7 @@ class HelloController implements ControllerInterface
 	}
 }
 ```
+Dans cet exemple, on récupère la ville du formulaire dans le controller avec la méthode get de la classe [Request voir (get($key))](fr-resquet.md).
 
+> Pour aller plus loin, vous pouvez lire la documentation de la classe [Request](fr-resquet.md) pour comprendre comment gérer les requêtes HTTP.
+{style="info"}
