@@ -2,6 +2,23 @@
 
 Présentation des versions du framework.
 
+## v2.0 (2024)
+- ajout de la commande `php bin/edu make:api` pour générer un controller de type API
+- ajout de la commande `php bin/edu make:command` pour générer une commande console
+- ajout d'une page par défaut sur la route /
+- Barre de debug
+- Refonte des configurations Docker
+- Correction de bugs mineurs
+- Documentation
+  - Nouvelle interface et organisation par chapitre
+  - new [Request : La gestion des requêtes HTTP](fr-resquet.md)
+  - new [Liste des releases note](fr-release-edu.md)
+  - update [Comment installer EduFrame](fr-comment-installer-edu.md)
+  - update [Comment installer les services](fr-comment-installer-services.md) : Refactoring Docker
+  - update [Arborescence](fr-arborescence.md) : Nouvelle arbo v2.0
+  - update [Comment faire un controller](fr-controller-edu.md) : Plus de detail
+  - update [Comment faire un post dans un controller](fr-controller-post-edu.md) : Plus de detail
+
 ## v1.2 (03/2024)
 - ajout de la commande `php bin/edu start` pour démarrer le serveur de développement
 - ajout de la commande `php bin/edu check:config` pour vérifier la configuration du framework
