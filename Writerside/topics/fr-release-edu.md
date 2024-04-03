@@ -13,7 +13,7 @@ Présentation des versions du framework.
   - Nouvelle interface et organisation par chapitre
   - new [Request : La gestion des requêtes HTTP](fr-resquet.md)
   - new [Liste des releases note](fr-release-edu.md)
-  - update [Comment installer EduFrame](fr-comment-installer-edu.md)
+  - update [Comment installer EduFrame](fr-comment-installer-edu.md) : Nouvelle installation par version
   - update [Comment installer les services](fr-comment-installer-services.md) : Refactoring Docker
   - update [Arborescence](fr-arborescence.md) : Nouvelle arbo v2.0
   - update [Comment faire un controller](fr-controller-edu.md) : Plus de detail
