@@ -1,4 +1,4 @@
-# Request
+# Request : La gestion des requêtes HTTP
 
 Request est une classe qui permet de récupérer les données de la requête HTTP. 
 Elle permet de récupérer les paramètres de la requête (POST et GET), la route, les headers, etc.
