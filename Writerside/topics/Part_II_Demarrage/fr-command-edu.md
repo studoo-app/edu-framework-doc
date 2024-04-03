@@ -13,23 +13,29 @@ Pour voir les commandes disponibles, vous pouvez taper la commande suivante :
 php bin/edu list
 ``` 
 
-autre exemple, pour démarrer l'application, vous pouvez taper la commande suivante
+Autre exemple, pour démarrer l'application, vous pouvez taper la commande suivante
 
 ```Shell
 php bin/edu start
 ```
 
-Voici les commandes disponibles :
+Voici les commandes disponibles par version :
 
+> La version est disponible en tapant la commande suivante :
+> ```Shell
+> php bin/edu
+> ```
+> Remarque : La version est affichée en bas "EduFrame" (en jaune selon le terminal utilisé)
+{style="info"}
 
-| Composants      | Version                                       |
-|-----------------|-----------------------------------------------|
-| start           | pour démarrer l'application                   |
-| list            | pour lister les commandes disponibles         |
-| check:config    | check la configuration de votre environnement |
-| make:controller | génération d'un controller                    |
-| make:api        | génération d'un controller type json API      |
-| make:command    | génération d'un commande line                 |
+| Composants      | Description                                   | A partir de la version |
+|-----------------|-----------------------------------------------|------------------------|
+| start           | pour démarrer l'application                   | v1.2                   |
+| list            | pour lister les commandes disponibles         | v1.2                   |
+| check:config    | check la configuration de votre environnement | v1.2                   |
+| make:controller | génération d'un controller                    | v1.0                   |
+| make:api        | génération d'un controller type json API      | v2.0                   |
+| make:command    | génération d'un commande line                 | v2.0                   |
 
 
 ## Si vous rencontrez une erreur
