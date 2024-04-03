@@ -182,6 +182,12 @@ Une route est une URL qui est associée à une action spécifique dans une appli
 
 ## S
 
+### syntaxe
+La syntaxe est l'ensemble des règles qui définissent la structure et la forme des éléments d'un langage de programmation.
+Chaques langages de programmation a sa propre syntaxe.
+
+- [https://developer.mozilla.org/fr/docs/Glossary/Syntax](https://developer.mozilla.org/fr/docs/Glossary/Syntax)
+
 ### SQL
 SQL (Structured Query Language) est un langage informatique normalisé servant à exploiter des bases de données relationnelles.
 
