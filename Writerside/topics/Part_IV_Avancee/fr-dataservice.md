@@ -21,3 +21,7 @@ $statementPDO = $comBase->query("SELECT * FROM user");
 $users = $statementPDO->fetchAll();
 ```
 
+$commBase est un objet de type PDO qui permet de faire des requêtes SQL sur la base de données.
+$commBase->query() permet de faire une requête SQL sur la base de données.
+$statementPDO est un objet de type PDOStatement qui contient les résultats de la requête.
+$statementPDO->fetchAll() permet de récupérer les résultats de la requête.

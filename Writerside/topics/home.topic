@@ -12,24 +12,23 @@
         </description>
 
         <spotlight>
-            <a href="fr-avant-demarrer.md" type="start"
-               summary="Les pré-requis pour bien démarrer"/>
-            <a href="fr-edu-framework.md" type="container"
-               summary="A qui s'adresse ce framework ?"/>
+            <a href="fr-avant-demarrer.md" type="start" summary="Les pré-requis pour bien démarrer"/>
+            <a href="fr-edu-framework.md" type="container" summary="A qui s'adresse ce framework ?"/>
         </spotlight>
 
         <primary>
             <title>Comment démarrer ?</title>
             <a href="fr-demarrage.md" type="development" summary="Guide d'installation"/>
             <a href="fr-comment-versionner.md" type="community" summary="Utilisation de GIT"/>
-            <a href="fr-start-edu.md" summary="Comment démarrer l'application"/>
-            <a href="fr-comment-installer-services.md" summary="Les services Docker"/>
+            <a href="fr-command-edu.md" type="computer" summary="Utilisation via une commande"/>
+            <a href="fr-start-edu.md" type="presentation" summary="Comment démarrer l'application"/>
         </primary>
 
         <secondary>
-            <title>Explore et apprend</title>
+            <title>Explore et apprendre</title>
             <a href="fr-start-edu.md" summary="Comment démmarrer le projet"/>
             <a href="fr-controller-edu.md" summary="Construire une nouvelle page"/>
+            <a href="fr-comment-installer-services.md" summary="Les services avec Docker ou non"/>
         </secondary>
 
     </section-starting-page>
