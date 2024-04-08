@@ -5,7 +5,7 @@ Présentation des versions du framework.
 ## v2.0 (2024)
 - ajout de la commande `php bin/edu make:api` pour générer un controller de type API
 - ajout de la commande `php bin/edu make:command` pour générer une commande console
-- ajout d'une page par défaut sur la route /
+- ajout d'une page par défaut sur la route 
 - Barre de debug
 - Refonte des configurations Docker
 - Correction de bugs mineurs

@@ -25,11 +25,40 @@
         </primary>
 
         <secondary>
-            <title>Explore et apprendre</title>
+            <title>Explorer et apprendre</title>
             <a href="fr-start-edu.md" summary="Comment démmarrer le projet"/>
             <a href="fr-controller-edu.md" summary="Construire une nouvelle page"/>
             <a href="fr-comment-installer-services.md" summary="Les services avec Docker ou non"/>
         </secondary>
 
+        <misc>
+            <cards>
+                <title>Les avancées</title>
+                <a href="https://getcomposer.org"
+                   summary="Gestionnaire de dépendance">Composer</a>
+                <a href="https://packagist.org"
+                   summary="Explore les librairies gèrer par composer">Packagist</a>
+            </cards>
+
+            <cards>
+                <title>Les outils et les news</title>
+                <a href="fr-release-edu.md"
+                   summary="Release note">Quoi de neuf sur Edu</a>
+                <a href="https://twig.symfony.com/doc/3.x/"
+                   summary="Moteur de template">Documentation de twig</a>
+                <a href="https://getcomposer.org"
+                   summary="Gestionnaire de dépendance">Composer</a>
+                <a href="https://packagist.org"
+                   summary="Explore les librairies gèrer par composer">Packagist</a>
+            </cards>
+
+            <cards>
+                <title>Les fiches</title>
+                <a href="fr-glossaire.md"
+                   summary="Le vocabulaire pour parler TECH">Glossaire</a>
+                <a href="fr-mvc-edu.md"
+                   summary="Le MVC, c'est quoi ?">Concept MVC</a>
+            </cards>
+        </misc>
     </section-starting-page>
 </topic>
