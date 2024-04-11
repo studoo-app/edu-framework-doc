@@ -42,8 +42,3 @@ Pour installer les services sur votre machine, vous pouvez installer les service
 
 > Cette liste n'est pas exhaustive et peut être amenée à évoluer.
 {style="note"}
-
-
-
-
-

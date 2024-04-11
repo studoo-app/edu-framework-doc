@@ -37,6 +37,11 @@
         <toc-element topic="fr-dataservice.md"/>
     </toc-element>
 
+    <toc-element toc-title="Part V Les migrations majeurs" topic="fr-major.md">
+        <toc-element topic="fr-migration-1_2-2_0.md"/>
+        <toc-element topic="fr-migration-0_6-1_2.md"/>
+    </toc-element>
+
     <toc-element toc-title="Annexe">
         <toc-element topic="fr-glossaire.md"/>
         <toc-element topic="fr-error-edu.md"/>
