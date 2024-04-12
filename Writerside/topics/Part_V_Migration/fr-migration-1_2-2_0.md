@@ -87,7 +87,7 @@ composer edu:docker:db-service:stop mysql
         </warning>
         Pour télécharger le fichier compose, suivre les instructions :
         <code-block lang="Bash">
-        mkdir bin &amp;&amp; curl -sS https://raw.githubusercontent.com/studoo-app/edu-framework/2.0/compose.yaml -o compose.yaml
+        curl -sS https://raw.githubusercontent.com/studoo-app/edu-framework/2.0/compose.yaml -o compose.yaml
         </code-block>
     </tab>
 </tabs>
