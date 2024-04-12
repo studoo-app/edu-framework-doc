@@ -10,7 +10,8 @@ Voici la liste des composants nécessaires pour assurer le bon déroulement du p
 - 2. [La gestion des versions avec GIT](fr-git.md)
 - 3. [Environnement de développement PHP](fr-php.md)
 - 4. [Gestionnaire de dépendance avec COMPOSER](fr-composer.md)
-- 5. [Installation de votre environnement de développement DOCKER](fr-docker.md)
+- 5. [La commande CURL](fr-curl.md)
+- 6. [Installation de votre environnement de développement DOCKER](fr-docker.md)
 
 
 Tableau des versions obligatoires et des extensions PHP nécessaires:

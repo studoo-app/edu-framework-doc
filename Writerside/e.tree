@@ -13,6 +13,7 @@
         <toc-element topic="fr-git.md"/>
         <toc-element topic="fr-php.md"/>
         <toc-element topic="fr-composer.md"/>
+        <toc-element topic="fr-curl.md"/>
         <toc-element topic="fr-docker.md"/>
     </toc-element>
 

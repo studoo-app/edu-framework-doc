@@ -64,6 +64,10 @@ Docker est une plateforme de virtualisation légère qui permet d'isoler et de g
 ### Dotenv
 Dotenv est une bibliothèque qui permet de charger des variables d'environnement à partir d'un fichier `.env`.
 
+### DEPRECATE
+Un élément de code est déprécié lorsqu'il est **obsolète** et qu'il est recommandé de ne plus l'utiliser.
+
+
 ## F
 
 ### Framework

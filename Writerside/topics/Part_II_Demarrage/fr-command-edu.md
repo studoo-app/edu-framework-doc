@@ -47,12 +47,12 @@ Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer a
 
 <tabs>
     <tab title="WINDOWS">
-        Pour installer command "edu", suivre les instructions :
         <warning>
             <p>
                 Ouvrir un terminal git bash à la racine de votre projet
             </p>
         </warning>
+        Pour installer la commande "edu", suivre les instructions :
         <code-block lang="Bash">
         scoop bucket add main
         </code-block>
@@ -70,12 +70,12 @@ Si vous avez une erreur pour utiliser la commande "edu", vous pouvez installer a
         </code-block>
     </tab>
     <tab title="MAC OS">
-        Pour installer command "edu", suivre les instructions :
         <warning>
             <p>
-                Ouvrir un terminal git bash à la racine de votre projet
+                Ouvrir un terminal à la racine de votre projet
             </p>
         </warning>
+        Pour installer command "edu", suivre les instructions :
         <code-block lang="Bash">
         mkdir bin &amp;&amp; curl -sS https://raw.githubusercontent.com/studoo-app/edu-framework/main/bin/edu -o bin/edu
         </code-block>

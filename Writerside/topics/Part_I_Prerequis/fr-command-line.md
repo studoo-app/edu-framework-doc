@@ -17,12 +17,12 @@ Pour faciliter les installations et la maintenance de votre setup, nous vous rec
 
 <tabs>
     <tab title="WINDOWS">
-        Pour installer "Scoop", suivre les instructions dans le "Quickstart" :
         <warning>
             <p>
                 Ne pas ouvrir le PowerShell en mode administrateur
             </p>
         </warning>
+        Pour installer "Scoop", suivre les instructions dans le "Quickstart" :
         <a href="https://scoop.sh/">https://scoop.sh</a>
     </tab>
     <tab title="MAC OS">
