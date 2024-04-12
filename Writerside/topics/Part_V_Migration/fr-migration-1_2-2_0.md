@@ -126,3 +126,35 @@ docker compose up -d
 rm -fr docker
 ```
 
+### **Fichier de configuration**
+
+Le fichier de configuration d'environnement a été modifié pour être plus lisible et plus facile à comprendre.
+
+Voici la liste des variables :
+
+ - La variable `APP_ENV` \
+Cette variable a pour fonction d'activer des fonctionnalités de debug
+
+| Valeur | Description |
+|--------|-------------|
+| dev    | Mode développement |
+| prod   | Mode production |
+
+Exemple :
+```Bash
+APP_ENV=dev
+```
+
+ - La variable `DB_TYPE` \
+Cette variable a pour fonction de définir le type de base de données
+
+| Valeur  | Description             |
+|---------|-------------------------|
+| mysql   | Base de données MySQL   |
+| mariadb | Base de données Mariadb |
+
+Exemple :
+```Bash
+DB_TYPE=mysql
+```
+
