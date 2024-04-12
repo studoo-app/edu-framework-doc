@@ -1,4 +1,4 @@
-# Comment installer les services ?
+# Comment installer et gérer les services ?
 Edu Framework utilise plusieurs services pour fonctionner. Pour les installer, vous avez deux possibilités :
 - Utiliser Docker pour émuler les services 
 - Installer les services directement sur votre machine
@@ -10,9 +10,13 @@ Edu Framework utilise plusieurs services pour fonctionner. Pour les installer, v
 
 <tabs>
     <tab title="à partir v2.0">
-        Pour installation des services, vous pouvez suivre les instructions suivantes :
+        Pour installation et démarrer des services, vous pouvez suivre les instructions suivantes :
         <code-block lang="Bash">
         docker compose up -d
+        </code-block>
+        Pour arrêter les services, vous pouvez suivre les instructions suivantes :
+        <code-block lang="Bash">
+        docker compose down
         </code-block>
     </tab>
     <tab title="Jusqu'en v1.2">
@@ -23,6 +27,10 @@ Edu Framework utilise plusieurs services pour fonctionner. Pour les installer, v
         Puis taper la commande suivante pour démarrer les services :
         <code-block lang="Bash">
         composer edu:docker:db-service:start mysql
+        </code-block>
+        Pour arrêter les services, vous pouvez suivre les instructions suivantes :
+        <code-block lang="Bash">
+        composer edu:docker:db-service:stop mysql
         </code-block>
     </tab>
 </tabs>

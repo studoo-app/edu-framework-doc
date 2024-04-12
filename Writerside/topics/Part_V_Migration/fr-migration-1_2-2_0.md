@@ -126,6 +126,30 @@ docker compose up -d
 rm -fr docker
 ```
 
+6. **Supprimer les lignes scripts dans composer** :
+
+> Ouvrir le fichier `composer.json` et supprimer les lignes suivantes :
+
+```
+  "scripts": {
+    "edu:start": [
+      "Composer\\Config::disableProcessTimeout",
+      "php -S localhost:8042 -t public"
+    ],
+    "edu:init": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+--  "edu:docker:db-service:start": "Studoo\\EduFramework\\Scripts\\DockerPilot::start",
+--  "edu:docker:db-service:down": "Studoo\\EduFramework\\Scripts\\DockerPilot::down"
+  },
+  "scripts-descriptions": {
+    "edu:init": "Create env file",
+    "edu:start": "Start local server",
+--  "edu:docker:db-service:start": "Start docker related database service [args : mysql / maria-db]",
+--  "edu:docker:db-service:down": "Stop and remove docker related database service [args : mysql / maria-db]"
+  }
+```
+
 ### **Fichier de configuration**
 
 Le fichier de configuration d'environnement a été modifié pour être plus lisible et plus facile à comprendre.
