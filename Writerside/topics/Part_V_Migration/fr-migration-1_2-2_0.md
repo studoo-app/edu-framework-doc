@@ -50,7 +50,7 @@ EduFramework v2.0.x-xxxx
 Les changements sont nombreux entre la version 1.2 et la version 2.0. \
 Voici les principaux changements à prendre en compte :
 
-- **Docker** : 
+### **Docker**
 Dans la version 1.2, les services était démarré avec la commande `composer edu:docker:db-service:start mysql`. \
 En version 2.0, les services sont démarrés avec la commande `docker compose up -d`.
 
@@ -91,4 +91,38 @@ composer edu:docker:db-service:stop mysql
         </code-block>
     </tab>
 </tabs>
+
+3. **Modifier le nouveau fichier Docker** :
+
+Vous pouvez modifier le fichier `compose.yaml` pour ajuster les paramètres à votre environnement.
+
+```
+    environment:
+      MYSQL_DATABASE: app_db
+--    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+++    #MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+--    #MYSQL_ROOT_PASSWORD: root
+++    MYSQL_ROOT_PASSWORD: root
+      #MYSQL_USER: app_db_user
+      #MYSQL_PASSWORD: app_db_password
+```
+
+> **Note** : Les commentaires sont ajoutés pour vous aider à comprendre les modifications.
+> Bien respecté la syntaxe YAML pour éviter les erreurs. (indentation, etc.)
+> {style="info"}
+
+4. **Démarrer les services** :
+
+```Bash
+docker compose up -d
+```
+
+5. **Supprimer les anciens dossier Docker** :
+
+> Ouvrir un terminal git bash à la racine de votre projet
+> {style="warning"}
+
+```Bash
+rm -fr docker
+```
 
