@@ -25,8 +25,8 @@ Tableau des versions EDU-Framework :
 
 | Version   | Etat                                   | Date sortie |
 |-----------|----------------------------------------|-------------|
-| 2.0.x-dev | <a href="fr-release-edu.md">alpha</a>  | en cours    |
-| 1.2.x-dev | <a href="fr-release-edu.md">stable</a> | 01/03/2024  |
+| 2.0.x-dev | <a href="fr-release-edu.md">beta</a> | 04/2024     |
+| 1.2.x-dev | <a href="fr-release-edu.md">stable</a> | 03/2024     |
 
 <a href="fr-release-edu.md">Lien sur les informations des releases EduFrame</a>
 
