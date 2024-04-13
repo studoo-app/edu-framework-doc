@@ -1,4 +1,4 @@
-# Migrer de la version 1.2 à la version 2.0
+# Migrer de la version v1.2 à v2.0
 
 ## Introduction
 La version 2.0 du framework apporte de nombreuses améliorations et corrections de bugs. \
