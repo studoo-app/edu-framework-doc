@@ -7,6 +7,42 @@ Elle est instanciée automatiquement dans le framework et est accessible dans le
 
 DatabaseService implémente l'interface de [PHP Data Objects (PDO)](https://www.php.net/manual/fr/book.pdo.php) pour autoriser l'accès de PHP aux bases de données
 
+## Prérequis
+Vous devez avoir une base de données MySQL ou MariaDB pour utiliser cette classe.
+Quelques informations de connexion à la base de données sont nécessaires pour configurer la connexion à la base de données.
+
+## Installation
+
+Pour utiliser la classe DatabaseService, vous devez renseigner les informations de connexion à la base de données dans le fichier `.env` de votre projet.
+
+Vous devez modifier les variables suivantes dans le fichier `.env` :
+- **DB_HOST_STATUS** : `true` pour activer la connexion à la base de données, `false` pour la désactiver
+- **DB_TYPE** : le type de base de données (mysql ou mariadb)
+- **DB_HOST** : l'adresse IP ou le nom du serveur de base de données
+- **DB_SOCKET** : le port de la base de données
+- **DB_USER** : le nom de l'utilisateur de la base de données
+- **DB_PASSWORD** : le mot de passe de l'utilisateur de la base de données
+- **DB_NAME** : le nom de la base de données
+
+Exemple de configuration de la base de données dans le fichier `.env` :
+```
+## << Config Database
+## pour activer la connexion à la base de données, il faut mettre DB_HOST_STATUS=true
+DB_HOST_STATUS=false
+## Type de base de données (mysql,mariadb)
+DB_TYPE=mysql
+## IP ou nom du serveur de base de données
+DB_HOST=127.0.0.1
+## Port de la base de données
+DB_SOCKET=3306
+## Nom de l'utilisateur de la base de données
+DB_USER=root
+## Mot de passe de l'utilisateur de la base de données
+DB_PASSWORD=root
+## Nom de la base de données
+DB_NAME=app_db
+## >> Config Database
+```
 
 ## Utilisation
 
