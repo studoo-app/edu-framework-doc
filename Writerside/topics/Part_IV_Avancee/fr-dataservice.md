@@ -44,7 +44,7 @@ DB_NAME=app_db
 ## >> Config Database
 ```
 
-## Utilisation
+## Utilisation simple
 
 Pour utiliser la classe DatabaseService, voici un exemple simple :
 
@@ -61,3 +61,4 @@ $commBase est un objet de type PDO qui permet de faire des requêtes SQL sur la 
 $commBase->query() permet de faire une requête SQL sur la base de données.
 $statementPDO est un objet de type PDOStatement qui contient les résultats de la requête.
 $statementPDO->fetchAll() permet de récupérer les résultats de la requête.
+

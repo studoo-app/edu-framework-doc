@@ -150,7 +150,7 @@ rm -fr docker
   }
 ```
 
-### **Fichier de configuration**
+### **Barre de debug**
 
 Le fichier de configuration d'environnement a été modifié pour être plus lisible et plus facile à comprendre.
 
@@ -182,3 +182,10 @@ Exemple :
 DB_TYPE=mysql
 ```
 
+## Les nouveautés
+
+### **Nouvelles commandes**
+De nouvelles commandes ont été ajoutées pour faciliter le développement de votre application.
+
+- `php bin/edu make:api` : Pour générer un controller de type API
+- `php bin/edu make:command` : Pour générer une commande console
