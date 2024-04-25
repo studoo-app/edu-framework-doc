@@ -35,6 +35,7 @@
     <toc-element toc-title="Part IV Comment avancer ?" topic="fr-avancee.md">
         <toc-element topic="fr-resquet.md"/>
         <toc-element topic="fr-dataservice.md"/>
+        <toc-element topic="fr-dataservice-crud.md"/>
         <toc-element topic="fr-new-command-edu.md"/>
     </toc-element>
 

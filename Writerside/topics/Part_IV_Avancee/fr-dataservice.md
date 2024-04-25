@@ -7,6 +7,9 @@ Elle est instanciée automatiquement dans le framework et est accessible dans le
 
 DatabaseService implémente l'interface de [PHP Data Objects (PDO)](https://www.php.net/manual/fr/book.pdo.php) pour autoriser l'accès de PHP aux bases de données
 
+> Pour plus d'informations sur l'objet PDO, vous pouvez consulter la [documentation officielle](https://www.php.net/manual/fr/book.pdo.php).
+> {style="info"}
+
 ## Prérequis
 Vous devez avoir une base de données MySQL ou MariaDB pour utiliser cette classe.
 Quelques informations de connexion à la base de données sont nécessaires pour configurer la connexion à la base de données.
