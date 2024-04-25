@@ -62,3 +62,48 @@ $commBase->query() permet de faire une requête SQL sur la base de données.
 $statementPDO est un objet de type PDOStatement qui contient les résultats de la requête.
 $statementPDO->fetchAll() permet de récupérer les résultats de la requête.
 
+## Utilisation avancée
+
+Pour une utilisation plus avancée de la classe DatabaseService, vous pouvez utiliser les méthodes suivantes :
+
+### query($sql)
+
+La méthode query($sql) permet de faire une requête SQL sur la base de données.
+
+```php
+$statementPDO = $comBase->query("SELECT * FROM user");
+```
+
+### prepare($sql)
+
+La méthode prepare($sql) permet de préparer une requête SQL sur la base de données.
+
+```php
+$statementPDO = $comBase->prepare("SELECT * FROM user WHERE id = :id");
+$statementPDO->execute(['id' => 1]);
+```
+
+### execute($params)
+
+La méthode execute($params) permet d'exécuter une requête préparée avec des paramètres.
+
+```php
+$statementPDO->execute(['id' => 1]);
+```
+
+### fetchAll()
+
+La méthode fetchAll() permet de récupérer tous les résultats de la requête.
+
+```php
+$users = $statementPDO->fetchAll();
+```
+
+### fetch()
+
+La méthode fetch() permet de récupérer un seul résultat de la requête.
+
+```php
+$user = $statementPDO->fetch();
+```
+
