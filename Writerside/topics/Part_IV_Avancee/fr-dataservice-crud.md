@@ -33,7 +33,7 @@ Pour lire les enregistrements de la base de données, vous devez utiliser la mé
 // Recupere l'object PHP PDO
 $comBase = DatabaseService::getConnect();
 // Requete SQL
-$statementPDO = $comBase->select("SELECT * FROM user");
+$statementPDO = $comBase->query("SELECT * FROM user");
 // Recuperation des résultats de la requete
 $users = $statementPDO->fetchAll();
 ```
@@ -46,7 +46,7 @@ Pour mettre à jour un enregistrement dans la base de données, vous devez utili
 // Recupere l'object PHP PDO
 $comBase = DatabaseService::getConnect();
 // Requete SQL
-$statementPDO = $comBase->update("UPDATE user SET name='Jane Doe' WHERE id=1");
+$statementPDO = $comBase->query("UPDATE user SET name='Jane Doe' WHERE id=1");
 ```
 
 ### Delete
@@ -57,7 +57,7 @@ Pour supprimer un enregistrement de la base de données, vous devez utiliser la 
 // Recupere l'object PHP PDO
 $comBase = DatabaseService::getConnect();
 // Requete SQL
-$statementPDO = $comBase->delete("DELETE FROM user WHERE id=1");
+$statementPDO = $comBase->query("DELETE FROM user WHERE id=1");
 ```
 
 ## Utilisation avancée
@@ -74,3 +74,111 @@ $statementPDO->execute(['id' => 1]);
 $users = $statementPDO->fetchAll();
 ```
 
+# User Case Ville
+
+Nous allons créer un CRUD pour la gestion des villes.
+
+## Création de la table
+
+```sql
+CREATE TABLE ville (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    code_postal VARCHAR(10) NOT NULL,
+    nombre_habitant INT NOT NULL
+);
+INSERT INTO ville (nom, code_postal, nombre_habitant) VALUES ('Paris', '75000', 2200000);
+INSERT INTO ville (nom, code_postal, nombre_habitant) VALUES ('Marseille', '13000', 800000);
+INSERT INTO ville (nom, code_postal, nombre_habitant) VALUES ('Lyon', '69000', 500000);
+```
+
+## Création du CRUD
+
+### Liste des Villes (Read)
+
+```shell
+php bin/edu make:controller villeRead
+```
+
+Cette commande va créer un fichier `VilleReadController.php` dans le dossier `app/Controller`, ajouter des lignes dans le fichier `config/routes.yaml` et créer un fichier `villeread.html.twig` dans le dossier `app/Template/villeread`.
+
+Voici l'arborecence du projet :
+
+```
+├── app
+│   ├── Config
+│   │   └── routes.yaml
+│   ├── Controller
+│   │   └── VilleReadController.php
+│   └── Template
+│       ├── base.html.twig
+│       └── villeread
+│           └── villeread.html.twig
+```
+
+Dans le fichier VillereadController.php, vous devez ajouter :
+
+```
+<?php
+
+namespace Controller;
+
+use Studoo\EduFramework\Core\Controller\ControllerInterface;
+use Studoo\EduFramework\Core\Controller\Request;
+use Studoo\EduFramework\Core\Service\DatabaseService;
+use Studoo\EduFramework\Core\View\TwigCore;
+
+class VilleReadController implements ControllerInterface
+{
+	public function execute(Request $request): string|null
+	{
++        // Recupere l'object PHP PDO
++        $comBase = DatabaseService::getConnect();
++        // Requete SQL
++        $statementPDO = $comBase->query("SELECT * FROM ville");
++        // Recuperation des résultats de la requete
++        $villes = $statementPDO->fetchAll();
+
+
+		return TwigCore::getEnvironment()->render('villeread/villeread.html.twig',
+		    [
+		        "titre"   => 'VilleReadController',
+		        "request" => $request,
+ +               "villes" => $villes
+		    ]
+		);
+	}
+}
+```
+
+Dans le fichier `villeread.html.twig`, vous devez ajouter :
+
+```
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block content %}
+    <h1>{{ titre }}</h1>
++    <table class="table">
++        <thead>
++            <tr>
++                <th scope="col">ID</th>
++                <th scope="col">Nom</th>
++                <th scope="col">Code Postal</th>
++                <th scope="col">Nombre d'habitants</th>
++            </tr>
++        </thead>
++        <tbody>
++            {% for ville in villes %}
++                <tr>
++                    <td>{{ ville.id }}</td>
++                    <td>{{ ville.nom }}</td>
++                    <td>{{ ville.code_postal }}</td>
++                    <td>{{ ville.nombre_habitant }}</td>
++                </tr>
++            {% endfor %}
++        </tbody>
++    </table>
+{% endblock %}
+```
