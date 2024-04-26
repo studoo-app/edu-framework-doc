@@ -182,3 +182,30 @@ Dans le fichier `villeread.html.twig`, vous devez ajouter :
 +    </table>
 {% endblock %}
 ```
+
+### Ajouter des Villes (Create)
+
+```shell
+php bin/edu make:controller villeCreate
+```
+
+Cette commande va créer un fichier `VilleCreateController.php` dans le dossier `app/Controller`, ajouter des lignes dans le fichier `config/routes.yaml` et créer un fichier `villecreate.html.twig` dans le dossier `app/Template/villecreate`.
+
+Voici l'arborecence du projet :
+
+```
+├── app
+│   ├── Config
+│   │   └── routes.yaml
+│   ├── Controller
+│   │   ├── VilleCreateController.php
+│   │   └── VilleReadController.php
+│   └── Template
+│       ├── base.html.twig
+│       ├── villecreate
+│       │   └── villecreate.html.twig
+│       └── villeread
+│           └── villeread.html.twig
+```
+
+Comming soon...
