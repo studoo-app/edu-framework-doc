@@ -351,6 +351,8 @@ La commmande `make:controller` :
 php bin/edu make:controller villeUpdate
 ```
 
+Voici l'arborecence du projet :
+
 Pour modifier une ville, nous devons gérer sa modification via son idenfifiant (clé primaire). \
 Dans notre use case, l'identifiant est ville.id. \
 Notre action est de mettre la route `villeupdate` dans la liste avec comme argument `ville.id`
@@ -697,6 +699,20 @@ Pour une meilleure organisation des controllers, vous pouvez regrouper les contr
 
 ```shell
 mkdir app/Controller/Ville
+```
+
+Voici l'arborecence du projet :
+
+```
+├── app
+│   ├── Config
+│   │   └── routes.yaml
+│   ├── Controller
+│   │   ├── Ville
+│   │   │   ├── VilleReadController.php
+│   │   │   ├── VilleCreateController.php
+│   │   │   ├── VilleUpdateController.php
+│   │   │   └── VilleDeleteController.php
 ```
 
 Dans ce dossier, vous pouvez déplacer les controllers `VilleReadController.php`, `VilleCreateController.php`, `VilleUpdateController.php` et `VilleDeleteController.php`.
