@@ -328,6 +328,12 @@ villecreate:
 ++  httpMethod: [GET,POST]
 ```
 
+Vous pouvez maintenant ajouter un lien dans la page `villeread.html.twig` pour accéder à la page `villecreate.html.twig`.
+
+```Twig
+<a href="/villecreate">Ajouter une ville</a>
+```
+
 ### Modifier des Villes (Update)
 
 > Les étapes sont :
@@ -527,4 +533,180 @@ class VilleUpdateController implements ControllerInterface
 }
 ```
 
-Ce code va mettre à jour les informations de la ville dans la base de données si la méthode HTTP est POST. \
+Ce code va mettre à jour les informations de la ville dans la base de données si la méthode HTTP est POST. 
+
+### Supprimer des Villes (Delete)
+
+> Les étapes sont :
+> - Création des fichiers de base via la commande `make:controller`
+> - Ajouter la route dans la liste des villes
+> - Faire la requête de suppression dans le controller
+> - Rediriger l'utilisateur vers la liste des villes
+> {style="info"}
+
+La commmande `make:controller` :
+
+```shell
+php bin/edu make:controller villeDelete
+```
+
+Pour supprimer une ville, nous devons gérer sa suppression via son idenfifiant (clé primaire). \
+Dans notre use case, l'identifiant est ville.id. \
+Notre action est de mettre la route `villedelete` dans la liste avec comme argument `ville.id`
+
+Aller dans le fichier `template/villeread/villeread.html.twig`
+
+```Twig 
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block content %}
+<h1>{{ titre }}</h1>
+<a href="/villecreate">Ajouter une ville</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Code Postal</th>
+            <th scope="col">Nombre d'habitants</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for ville in villes %}
+            <tr>
+                <td>{{ ville.id }}</td>
+                <td>{{ ville.nom }}</td>
+                <td>{{ ville.code_postal }}</td>
+                <td>{{ ville.nombre_habitant }}</td>
+                <td>
+                    <a href="/villeupdate/{{ ville.id }}">UPDATE</a>
+++                  <a href="/villedelete/{{ ville.id }}">DELETE</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+```
+
+Dans ce code, on ajoute une colonne `Action` à notre tableau et un lien avec URL `/villedelete/` en passant `ville.id` en argument GET.
+
+Vous devez ajouter la route `villedelete` dans le fichier `config/routes.yaml`.
+
+```yaml
+villedelete:
+--  uri: /villedelete
+++  uri: /villedelete/{id}
+    controller: Controller\VilleDeleteController
+    httpMethod: [GET]
+```
+
+Nous allons maintenant créer le controller `VilleDeleteController.php` dans le dossier `app/Controller`.
+
+```php
+<?php
+
+namespace Controller;
+
+use Studoo\EduFramework\Core\Controller\ControllerInterface;
+use Studoo\EduFramework\Core\Controller\Request;
+use Studoo\EduFramework\Core\View\TwigCore;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+++ use Studoo\EduFramework\Core\Service\DatabaseService;
+
+class VilleDeleteController implements ControllerInterface
+{
+	public function execute(Request $request): string|null
+	{
+++		if ($request->getHttpMethod() === 'GET' && $request->get("id") !== null) {
+++			$comBase = DatabaseService::getConnect();
+++			$statementPDO = $comBase->prepare("DELETE FROM ville WHERE id = :id");
+++			$statementPDO->execute(['id' => (int) $request->get('id')]);
+++		}
+++      header('Location: /villeread');
+++      return null;
+
+--		return TwigCore::getEnvironment()->render('villedelete/villedelete.html.twig',
+--		    [
+--		        "titre"   => 'VilleDeleteController',
+-- 		        "request" => $request
+--		    ]
+--		);
+	}
+}
+```
+
+Ce code va supprimer la ville de la base de données via son identifiant. \
+Une fois la suppression effectuée, l'utilisateur est redirigé vers la liste des villes via la fonction header('Location: /villeread').
+La fonction `return null` permet de ne pas afficher de vue.
+
+Comme il n'y a pas de vue à afficher, vous pouvez supprimer le code de la vue `villedelete.html.twig`.
+
+## Conclusion
+
+Le CRUD est un ensemble d'opérations de base pour la gestion des données dans une base de données. \
+Nous l'avons implémenté sans nous soucier des bonnes pratiques de développement.
+- Nous avons utilisé des requêtes SQL directes dans la couche controller.
+- Les routes ne sont pas organisées pour une meilleure lisibilité.
+- Les vues ne sont pas structurées pour une meilleure maintenabilité.
+
+## Refactoring
+
+Comment refactorez le code pour améliorer la lisibilité et la maintenabilité du code ?
+
+### Armonisation des routes
+
+Pour une meilleure organisation des routes, vous pouvez regrouper les routes par entité.
+
+```yaml
+++ # Ville routes
+villeread:
+--  uri: /villeread  
+++  uri: /ville
+    controller: Controller\VilleReadController
+    httpMethod: [GET]
+villecreate:
+--  uri: /villecreate  
+++  uri: /ville/new
+    controller: Controller\VilleCreateController
+    httpMethod: [GET, POST]
+villeupdate:
+--  uri: /villeupdate/{id}  
+++  uri: '/ville/{id}/update'
+    controller: Controller\VilleUpdateController
+    httpMethod: [GET, POST]
+villedelete:
+    uri: '/ville/{id}/delete'
+    controller: Controller\VilleDeleteController
+    httpMethod: [GET]
+```
+
+Vous devez maintenant changer les noms dans les fichiers de controller et de vue.
+
+> Vérifier en rejouant le CRUD de ville si les routes sont bien configurées.
+> {style="warning"}
+
+### Regrouper les controllers
+
+Pour une meilleure organisation des controllers, vous pouvez regrouper les controllers par entité.
+
+```shell
+mkdir app/Controller/Ville
+```
+
+Dans ce dossier, vous pouvez déplacer les controllers `VilleReadController.php`, `VilleCreateController.php`, `VilleUpdateController.php` et `VilleDeleteController.php`.
+
+Puis vous devez modifier les namespaces dans les fichiers de controller.
+
+```php
+namespace Controller\Ville;
+```
+
+> Vérifier en rejouant le CRUD de ville si les controllers sont bien organisés.
+> {style="warning"}
+
