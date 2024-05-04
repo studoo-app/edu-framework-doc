@@ -104,6 +104,14 @@ INSERT INTO ville (nom, code_postal, nombre_habitant) VALUES ('Lyon', '69000', 5
 
 ### Liste des Villes (Read)
 
+> Les étapes sont : 
+> - Création des fichiers de base via la commande `make:controller`
+> - Récupération des données via l'objet [Databaseservice](fr-dataservice.md)
+> - Affichage d'un tableau HTML des données récupérées en base de donnée
+> {style="info"}
+
+La commande `make:crontroller` :
+
 ```shell
 php bin/edu make:controller villeRead
 ```
@@ -196,6 +204,15 @@ Une boucle `for` permet de parcourir la liste des villes et d'afficher les infor
 > {style="info"}
 
 ### Ajouter des Villes (Create)
+
+> Les étapes sont :
+> - Création des fichiers de base via la commande `make:controller`
+> - Création d'un formulaire pour envoyer les données en méthode POST dans le controller
+> - Récupération des données dans le controller et les inserer en base de donnée
+> - Mettre les droits sur la route du controller
+> {style="info"}
+
+La commmande `make:controller` :
 
 ```shell
 php bin/edu make:controller villeCreate
