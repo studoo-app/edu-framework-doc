@@ -207,9 +207,9 @@ Une boucle `for` permet de parcourir la liste des villes et d'afficher les infor
 
 > Les étapes sont :
 > - Création des fichiers de base via la commande `make:controller`
+> - Mettre les droits sur la route du controller
 > - Création d'un formulaire pour envoyer les données en méthode POST dans le controller
 > - Récupération des données dans le controller et les inserer en base de donnée
-> - Mettre les droits sur la route du controller
 > {style="info"}
 
 La commmande `make:controller` :
@@ -318,7 +318,7 @@ Il récupère les données du formulaire via la méthode POST et les envoie au c
 > Plus d'informations sur les formulaires HTML : [https://developer.mozilla.org/fr/docs/Web/HTML/Element/Form](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Form)
 
 Une erreur http 405 peut apparaitre si la méthode HTTP est en methode POST. \
-Pour résoudre cette erreur, vous devez ajouter la méthode POST dans le fichier de configuration des routes.
+Pour résoudre cette erreur de droit au POST, vous devez ajouter la méthode POST dans le fichier de configuration des routes.
 
 ```
 villecreate:
@@ -330,4 +330,201 @@ villecreate:
 
 ### Modifier des Villes (Update)
 
-> cooming soon
+> Les étapes sont :
+> - Création des fichiers de base via la commande `make:controller`
+> - Ajouter la route dans la liste des villes
+> - Mettre les droits sur la route du controller
+> - Récuperer les données dans le controller
+> - Création d'un formulaire pour modifier les données en méthode POST dans le controller
+> - Récupération des données dans le controller et les inserer en base de donnée
+> {style="info"}
+
+La commmande `make:controller` :
+
+```shell
+php bin/edu make:controller villeUpdate
+```
+
+Pour modifier une ville, nous devons gérer sa modification via son idenfifiant (clé primaire). \
+Dans notre use case, l'identifiant est ville.id. \
+Notre action est de mettre la route `villeupdate` dans la liste avec comme argument `ville.id`
+
+Aller dans le fichier `template/villeread/villeread.html.twig`
+
+```php
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block content %}
+<h1>{{ titre }}</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Code Postal</th>
+            <th scope="col">Nombre d'habitants</th>
+++          <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for ville in villes %}
+            <tr>
+                <td>{{ ville.id }}</td>
+                <td>{{ ville.nom }}</td>
+                <td>{{ ville.code_postal }}</td>
+                <td>{{ ville.nombre_habitant }}</td>
+++              <td><a href="/villeupdate/{{ ville.id }}">UPDATE</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+```
+
+Dans ce code, on ajoute une colonne `Action` à notre tableau et un lien avec URL `/villeupdate/` en passant `ville.id` en argument GET.
+Un nouveau format de route se crée dans le fichier `config/routes.yaml` pour la route `villeupdate`.
+`{id}` est un paramètre dynamique inclut dans la route qui permet de récupérer l'identifiant de la ville à modifier.
+
+Vous devez ajouter la route `villeupdate` dans le fichier `config/routes.yaml`.
+
+```yaml
+villeupdate:
+--  uri: /villeupdate  
+++  uri: /villeupdate/{id}
+    controller: Controller\VilleUpdateController
+--  httpMethod: [GET]    
+++  httpMethod: [GET,POST]
+```
+
+> Ce nouveau format de route est documenté dans la documentation la librairie [FastRoute](https://github.com/nikic/FastRoute).
+> {style="info"}
+
+Nous allons maintenant créer le controller `VilleUpdateController.php` dans le dossier `app/Controller`.
+
+```php
+<?php
+
+namespace Controller;
+
+use Studoo\EduFramework\Core\Controller\ControllerInterface;
+use Studoo\EduFramework\Core\Controller\Request;
+use Studoo\EduFramework\Core\View\TwigCore;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+++ use Studoo\EduFramework\Core\Service\DatabaseService;
+
+class VilleUpdateController implements ControllerInterface
+{
+	public function execute(Request $request): string|null
+	{
+++		$comBase = DatabaseService::getConnect();
+++
+++		if ($request->getHttpMethod() === 'GET' && $request->get("id") !== null) {
+++			$statementPDO = $comBase->prepare("SELECT * FROM ville WHERE id = :id");
+++			$statementPDO->execute(['id' => (int) $request->get("id")]);
+++			$ville = $statementPDO->fetch();
+++		}
+
+		return TwigCore::getEnvironment()->render('villeupdate/villeupdate.html.twig',
+		    [
+		        "titre"   => 'VilleUpdateController',
+--              "request" => $request		        
+++		        "ville" => $ville
+		    ]
+		);
+	}
+}
+```
+
+Ce code va récupérer les informations de la ville à modifier via son identifiant. \
+Il va afficher ces informations dans le formulaire de modification via la variable `$ville`.
+
+Nous allons maintenant créer la vue `villeupdate.html.twig` dans le dossier `app/Template/villeupdate`.
+
+```Twig
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block content %}
+<h1>{{ titre }}</h1>
+
+    {% if ville %}
+         <form method="post" action="/villeupdate/{{ ville.id }}">
+            <div class="form-group">
+                <label for="nom">Ville</label>
+                <input type="text" class="form-control" id="nom" name="nom" value="{{ ville.nom }}">
+            </div>
+            <div class="form-group">
+                <label for="code_postal">Code postal</label>
+                <input type="text" class="form-control" id="code_postal" name="code_postal" value="{{ ville.code_postal }}">
+            </div>
+                <div class="form-group">
+                <label for="nombre_habitant">Nombre d'habitant</label>
+                <input type="text" class="form-control" id="nombre_habitant" name="nombre_habitant" value="{{ ville.nombre_habitant }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </form>
+    {% else %}
+        <p>La ville n'existe pas.</p>
+    {% endif %}
+{% endblock %}
+```
+
+Ce code va afficher un formulaire pré-rempli avec les informations de la ville à modifier. \
+Il récupère les données du formulaire via la méthode POST et les envoie au controller pour les mettre à jour dans la base de données.
+Dans le formulaire, on observe que l'attribut `action` est `/villeupdate/{{ ville.id }}`. Ce qui s'initialise avec l'identifiant de la ville à modifier.
+Si la ville n'existe pas, un message d'erreur est affiché.
+
+Nous allons maintenant persister les données dans la base de données via le controller `VilleUpdateController.php`.
+
+```php
+<?php
+
+namespace Controller;
+
+use Studoo\EduFramework\Core\Controller\ControllerInterface;
+use Studoo\EduFramework\Core\Controller\Request;
+use Studoo\EduFramework\Core\Service\DatabaseService;
+use Studoo\EduFramework\Core\View\TwigCore;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+
+class VilleUpdateController implements ControllerInterface
+{
+	public function execute(Request $request): string|null
+	{
+		$comBase = DatabaseService::getConnect();
+
+		if ($request->getHttpMethod() === 'GET' && $request->get("id") !== null) {
+			$statementPDO = $comBase->prepare("SELECT * FROM ville WHERE id = :id");
+			$statementPDO->execute(['id' => (int) $request->get("id")]);
+			$ville = $statementPDO->fetch();
+		}
+
+++		if ($request->getHttpMethod() === 'POST') {
+++			$statementPDO = $comBase->prepare("UPDATE ville SET nom = :nom, code_postal = :code_postal, nombre_habitant = :nb_habitant WHERE id = :id");
+++			$statementPDO->execute([
+++				'id' => (int) $request->get('id'),
+++              'nom' => $request->get('nom'),
+++              'code_postal' => $request->get('code_postal'),
+++              'nb_habitant' => (int) $request->get('nombre_habitant')
+++			]);
+++			header('Location: /villeread');
+++		}
+
+		return TwigCore::getEnvironment()->render('villeupdate/villeupdate.html.twig',
+		    [
+		        "titre"   => 'VilleUpdateController',
+		        "ville" => $ville
+		    ]
+		);
+	}
+}
+```
+
+Ce code va mettre à jour les informations de la ville dans la base de données si la méthode HTTP est POST. \
