@@ -1,4 +1,4 @@
-# Release Notes
+# ChangeLog
 
 Présentation des versions du framework.
 
