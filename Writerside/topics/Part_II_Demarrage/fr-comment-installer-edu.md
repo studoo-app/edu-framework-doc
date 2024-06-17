@@ -23,10 +23,10 @@ Nous allons créer le projet à l'aide du gestionnaire de paquets "composer". Ce
 
 Tableau des versions EDU-Framework :
 
-| Version   | Etat                                   | Date sortie |
-|-----------|----------------------------------------|-------------|
-| 2.0.x-dev | <a href="fr-release-edu.md">beta</a> | 04/2024     |
-| 1.2.x-dev | <a href="fr-release-edu.md">stable</a> | 03/2024     |
+| Version | Etat                                   | Date sortie |
+|---------|----------------------------------------|-------------|
+| 2.x-dev | <a href="fr-release-edu.md">beta</a> | 04/2024     |
+| 1.x-dev | <a href="fr-release-edu.md">stable</a> | 03/2024     |
 
 <a href="fr-release-edu.md">Lien sur les informations des releases EduFrame</a>
 
